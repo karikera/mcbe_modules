@@ -10,6 +10,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karikera/mcbe_modules"
+  },
   "dependencies": {
     "@types/escape-string-regexp": "^2.0.1",
     "escape-string-regexp": "^2.0.0",
