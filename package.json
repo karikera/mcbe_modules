@@ -1,0 +1,34 @@
+{
+  "name": "mcbe_modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "cd \nnpm link"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/escape-string-regexp": "^2.0.1",
+    "escape-string-regexp": "^2.0.0",
+    "@mcbe/ruakr_util":"latest",
+    "@mcbe/ruakr_const":"latest",
+    "@mcbe/command":"latest",
+    "@mcbe/console":"latest",
+    "@mcbe/event":"latest",
+    "@mcbe/identifier":"latest",
+    "@mcbe/lang":"latest",
+    "@mcbe/nexttick":"latest",
+    "@mcbe/ruacore_server":"latest",
+    "@mcbe/system_server":"latest",
+    "@mcbe/system_shared":"latest",
+    "@mcbe/timer":"latest",
+    "@types/krlog":"latest",
+    "krevent":"latest",
+    "krlog":"latest",
+    "minecraft-scripting-types-client": "^1.0.0",
+    "minecraft-scripting-types-server": "^1.0.0"
+  }
+}

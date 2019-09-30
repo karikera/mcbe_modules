@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "strictNullChecks": true,
+        "alwaysStrict": true,
+        "noImplicitThis": true,
+        "suppressImplicitAnyIndexErrors": false,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "sourceMap": true,
+        "lib": ["esnext"],
+        "target": "esnext",
+        "declaration": true
+    },
+    "include": ["node_modules/@mcbe/**/*.ts"]
+}
