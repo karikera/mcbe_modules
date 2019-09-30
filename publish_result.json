@@ -1,0 +1,44 @@
+{
+    "krevent": {
+        "version": "1.0.0"
+    },
+    "@mcbe/ruakr_const": {
+        "version": "1.0.0"
+    },
+    "@mcbe/ruakr_util": {
+        "version": "1.0.0"
+    },
+    "@mcbe/system_shared": {
+        "version": "1.0.0"
+    },
+    "@mcbe/system_server": {
+        "version": "1.0.0"
+    },
+    "@mcbe/identifier": {
+        "version": "1.0.0"
+    },
+    "@mcbe/command": {
+        "version": "1.0.1"
+    },
+    "@mcbe/event": {
+        "version": "1.0.0"
+    },
+    "@mcbe/lang": {
+        "version": "1.0.0"
+    },
+    "@mcbe/nexttick": {
+        "version": "1.0.0"
+    },
+    "@mcbe/ruacore_server": {
+        "version": "1.0.0"
+    },
+    "@mcbe/timer": {
+        "version": "1.0.0"
+    },
+    "@mcbe/console": {
+        "version": "1.0.0"
+    },
+    "krlog": {
+        "version": "1.0.0"
+    }
+}
