@@ -1,6 +1,6 @@
 {
     "krevent": {
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "@mcbe/ruakr_const": {
         "version": "1.0.0"
@@ -9,7 +9,7 @@
         "version": "1.0.0"
     },
     "@mcbe/system_shared": {
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "@mcbe/system_server": {
         "version": "1.0.0"
@@ -18,7 +18,7 @@
         "version": "1.0.0"
     },
     "@mcbe/command": {
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "@mcbe/event": {
         "version": "1.0.2"
@@ -33,12 +33,15 @@
         "version": "1.0.0"
     },
     "@mcbe/timer": {
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "@mcbe/console": {
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "krlog": {
-        "version": "1.0.1"
+        "version": "1.0.2"
+    },
+    "@mcbe/dummy-console": {
+        "version": "1.0.0"
     }
 }

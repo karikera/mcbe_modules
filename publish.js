@@ -48,7 +48,7 @@ class Package
         if (!fs.existsSync(cwd + this.path+'/.npmignore')) console.error(`no .npmignore`);
 
         
-        const include = this.path.substr(1)+'/**/*.ts';
+        const include = this.path.substr(1)+'/**/*';
         if (!tsconfigInclude.has(include))
         {
             tsconfigInclude.add(include);
@@ -168,7 +168,7 @@ for (const package of packages.values())
         continue;
     }
 
-    console.log(`${package.name}: publishing...`);
+    console.log(`${package.name}@${package.json.version}: publishing...`);
     process.chdir(cwd + package.path);
 
     try

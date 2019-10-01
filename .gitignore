@@ -6,6 +6,7 @@
 ##<packages>
 !/node_modules/krevent
 !/node_modules/krlog
+!/node_modules/@mcbe/dummy-console
 !/node_modules/@mcbe/ruakr_const
 !/node_modules/@mcbe/ruakr_util
 !/node_modules/@mcbe/system_shared
