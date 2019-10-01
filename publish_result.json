@@ -9,7 +9,7 @@
         "version": "1.0.0"
     },
     "@mcbe/system_shared": {
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "@mcbe/system_server": {
         "version": "1.0.0"
@@ -18,13 +18,13 @@
         "version": "1.0.0"
     },
     "@mcbe/command": {
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "@mcbe/event": {
         "version": "1.0.2"
     },
     "@mcbe/lang": {
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "@mcbe/nexttick": {
         "version": "1.0.0"
