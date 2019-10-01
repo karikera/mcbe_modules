@@ -21,6 +21,67 @@ let errorCount = 0;
 
 for (const line of lines.slice(start, end))
 {
+}
+
+const CHECK_WAIT = -1;
+const CHECK_PASSED = -2;
+
+class Package
+{
+    /**
+     * @param {string} line 
+     * @param {string} name
+     */
+    constructor(line, name)
+    {
+        this.name = name;
+        if (!mainDepends.has(this.name))
+        {
+            throw Error(`no dependency in main package.json `);
+        }
+    
+        this.result = publish_result[name]
+        if (!this.result) publish_result[name] = this.result = {};
+    
+        this.path = line.substr(1);
+        if (!fs.existsSync(cwd + this.path+'/.npmignore')) console.error(`no .npmignore`);
+        
+        let packagetext;
+        try
+        {
+            packagetext = fs.readFileSync(cwd + this.path+'/package.json', 'utf-8');
+        }
+        catch (err)
+        {
+            throw Error(`cannot open package.json, ${err.code}`);
+        }
+        
+        try
+        {
+            this.json = JSON.parse(packagetext);
+            if (this.json.name !== this.name)
+            {
+                throw Error(`wrong package name`);
+            }
+        }
+        catch (err)
+        {
+            throw Error(`invalid package.json`);
+        }
+
+        this.isLatest = this.result.version === this.json.version;
+        this.entered = false;
+
+        this.check = CHECK_WAIT;
+        this.checkStackIdx = 0;
+    }
+
+}
+
+/** @type {Map<string, Package>} */
+const packages = new Map;
+for (const line of lines.slice(start, end))
+{
     if (!line.startsWith('!/node_modules/'))
     {
         console.error(`invalid path ${line}`);
@@ -28,48 +89,63 @@ for (const line of lines.slice(start, end))
         continue;
     }
 
-    const package = line.substr(15);
-    if (!mainDepends.has(package))
-    {
-        console.error(`${package}: no dependency in main package.json `);
-        errorCount++;
-        continue;
-    }
-
-    let result = publish_result[package]
-    if (!result) publish_result[package] = result = {};
-
-    process.chdir(path.join(cwd, line.substr(1)));
-    if (!fs.existsSync('.npmignore')) console.error(`${package}: no .npmignore`);
-
-    let packagejson;
+    const name = line.substr(15);
     try
     {
-        packagejson = JSON.parse(fs.readFileSync('package.json', 'utf-8'));
-        if (packagejson.name !== package)
-        {
-            console.error(`${package}: wrong package name`);
-            errorCount++;
-            continue;
-        }
+        packages.set(name, new Package(line, name));
     }
     catch (err)
     {
-        console.error(`${package}: invalid package.json`);
+        console.error(`${name}: invalid package.json`);
         errorCount++;
-        continue;
     }
-    
-    if (result.version === packagejson.version)
+}
+
+
+const stacks = [];
+
+/**
+ * @param {Package} package 
+ */
+function checkDependency(package)
+{
+    if (package.check === CHECK_PASSED) return;
+    if (package.check !== CHECK_WAIT) 
+    {
+        console.error('Dependency check failed: '+stacks.slice(package.check).join('->'));
+        process.exit(-1);
+    }
+    package.check = stacks.length;
+    stacks.push(package);
+    for (const dep in package.json.dependencies)
+    {
+        const pkg = packages.get(dep);
+        if (!pkg) continue;
+        checkDependency(pkg);
+    }
+    stacks.pop();
+    package.check = CHECK_PASSED;
+}
+
+for (const package of packages.values())
+{
+    checkDependency(package);
+}
+
+for (const package of packages.values())
+{
+    if (package.isLatest)
     {
         latestCount++;
         continue;
     }
 
-    console.log(`${package}: publishing...`);
+    console.log(`${package.name}: publishing...`);
+    process.chdir(cwd + package.path);
+
     try
     {
-        if (package.startsWith('@'))
+        if (package.name.startsWith('@'))
         {
             cp.execSync('npm publish --access public');   
         }
@@ -77,7 +153,7 @@ for (const line of lines.slice(start, end))
         {
             cp.execSync('npm publish');
         }
-        result.version = packagejson.version;
+        package.result.version = package.json.version;
         publishCount++;
     }
     catch (err)
@@ -85,8 +161,8 @@ for (const line of lines.slice(start, end))
         const message = err.message;
         if (message.indexOf('You cannot publish over the previously published versions') !== -1)
         {
-            console.log(`${package}: latest`);
-            result.version = packagejson.version;
+            console.log(`${package.name}: latest`);
+            package.result.version = package.json.version;
             latestCount++;
         }
         else
@@ -112,5 +188,4 @@ else
 }
 
 // cp.execSync('npm publish');
-
 
