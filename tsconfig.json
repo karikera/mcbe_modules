@@ -6,10 +6,28 @@
         "suppressImplicitAnyIndexErrors": false,
         "noImplicitAny": true,
         "module": "commonjs",
+        "outDir": "bin",
         "sourceMap": true,
-        "lib": ["esnext"],
-        "target": "esnext",
-        "declaration": true
+        "declaration": true,
+        "lib": [
+            "esnext"
+        ],
+        "target": "esnext"
     },
-    "include": ["node_modules/@mcbe/**/*.ts"]
+    "include": [
+        "node_modules/krevent/**/*.ts",
+        "node_modules/krlog/**/*.ts",
+        "node_modules/@mcbe/ruakr_const/**/*.ts",
+        "node_modules/@mcbe/ruakr_util/**/*.ts",
+        "node_modules/@mcbe/system_shared/**/*.ts",
+        "node_modules/@mcbe/system_server/**/*.ts",
+        "node_modules/@mcbe/identifier/**/*.ts",
+        "node_modules/@mcbe/command/**/*.ts",
+        "node_modules/@mcbe/event/**/*.ts",
+        "node_modules/@mcbe/lang/**/*.ts",
+        "node_modules/@mcbe/nexttick/**/*.ts",
+        "node_modules/@mcbe/ruacore_server/**/*.ts",
+        "node_modules/@mcbe/timer/**/*.ts",
+        "node_modules/@mcbe/console/**/*.ts"
+    ]
 }

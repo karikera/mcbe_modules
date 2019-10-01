@@ -13,18 +13,18 @@ const start = lines.indexOf('##<packages>')+1;
 const end = lines.indexOf('##</packages>', start);
 
 const mainpackage = JSON.parse(fs.readFileSync('package.json', 'utf-8'));
-const mainDepends = new Set(Object.keys(mainpackage.dependencies));
+let mainpackageModified = false;
 
 let latestCount = 0;
 let publishCount = 0;
 let errorCount = 0;
 
-for (const line of lines.slice(start, end))
-{
-}
-
 const CHECK_WAIT = -1;
 const CHECK_PASSED = -2;
+
+const tsconfig = JSON.parse(fs.readFileSync('tsconfig.json', 'utf-8'));
+let tsconfigModified = false;
+const tsconfigInclude = new Set(tsconfig.include);
 
 class Package
 {
@@ -35,16 +35,26 @@ class Package
     constructor(line, name)
     {
         this.name = name;
-        if (!mainDepends.has(this.name))
+        if (!(this.name in mainpackage.dependencies))
         {
-            throw Error(`no dependency in main package.json `);
+            mainpackage.dependencies[this.name] = 'latest';
+            mainpackageModified = true;
+            console.log(`${this.name}: added dependency to main package.json`);
         }
-    
         this.result = publish_result[name]
         if (!this.result) publish_result[name] = this.result = {};
     
         this.path = line.substr(1);
         if (!fs.existsSync(cwd + this.path+'/.npmignore')) console.error(`no .npmignore`);
+
+        
+        const include = this.path.substr(1)+'/**/*.ts';
+        if (!tsconfigInclude.has(include))
+        {
+            tsconfigInclude.add(include);
+            tsconfigModified = true;
+            console.log(`${this.name}: added include to tsconfig.json`);
+        }
         
         let packagetext;
         try
@@ -78,6 +88,8 @@ class Package
 
 }
 
+///////////////////////////////////////////////
+// load packages
 /** @type {Map<string, Package>} */
 const packages = new Map;
 for (const line of lines.slice(start, end))
@@ -96,12 +108,13 @@ for (const line of lines.slice(start, end))
     }
     catch (err)
     {
-        console.error(`${name}: invalid package.json`);
+        console.error(err.message);
         errorCount++;
     }
 }
 
-
+///////////////////////////////////////////////
+// check deps
 const stacks = [];
 
 /**
@@ -132,6 +145,21 @@ for (const package of packages.values())
     checkDependency(package);
 }
 
+///////////////////////////////////////////////
+// update modified
+if (mainpackageModified)
+{
+    fs.writeFileSync('package.json', JSON.stringify(mainpackage, null, 4), 'utf-8');
+}
+
+if (tsconfigModified)
+{
+    tsconfig.include = [...tsconfigInclude.values()];
+    fs.writeFileSync('tsconfig.json', JSON.stringify(tsconfig, null, 4), 'utf-8');
+}
+
+///////////////////////////////////////////////
+// publish
 for (const package of packages.values())
 {
     if (package.isLatest)
@@ -145,14 +173,12 @@ for (const package of packages.values())
 
     try
     {
+        let cmd = 'npm publish';
         if (package.name.startsWith('@'))
         {
-            cp.execSync('npm publish --access public');   
+            cmd += ' --access public';
         }
-        else
-        {
-            cp.execSync('npm publish');
-        }
+        cp.execSync(cmd);
         package.result.version = package.json.version;
         publishCount++;
     }
