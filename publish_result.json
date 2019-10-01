@@ -9,7 +9,7 @@
         "version": "1.0.0"
     },
     "@mcbe/system_shared": {
-        "version": "1.0.2"
+        "version": "1.0.4"
     },
     "@mcbe/system_server": {
         "version": "1.0.0"
@@ -33,7 +33,7 @@
         "version": "1.0.0"
     },
     "@mcbe/timer": {
-        "version": "1.0.1"
+        "version": "1.0.3"
     },
     "@mcbe/console": {
         "version": "1.0.4"
@@ -43,5 +43,14 @@
     },
     "@mcbe/dummy-console": {
         "version": "1.0.2"
+    },
+    "krchecktimer": {
+        "version": "1.0.0"
+    },
+    "@mcbe/store": {
+        "version": "1.0.1"
+    },
+    "@mcbe/scoreboard": {
+        "version": "1.0.0"
     }
 }

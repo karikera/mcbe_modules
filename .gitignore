@@ -6,6 +6,8 @@
 ##<packages>
 !/node_modules/krevent
 !/node_modules/krlog
+!/node_modules/krchecktimer
+!/node_modules/@mcbe/store
 !/node_modules/@mcbe/dummy-console
 !/node_modules/@mcbe/ruakr_const
 !/node_modules/@mcbe/ruakr_util
@@ -19,6 +21,7 @@
 !/node_modules/@mcbe/ruacore_server
 !/node_modules/@mcbe/timer
 !/node_modules/@mcbe/console
+!/node_modules/@mcbe/scoreboard
 ##</packages>
 *.js
 *.js.map

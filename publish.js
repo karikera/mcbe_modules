@@ -156,6 +156,7 @@ if (tsconfigModified)
 {
     tsconfig.include = [...tsconfigInclude.values()];
     fs.writeFileSync('tsconfig.json', JSON.stringify(tsconfig, null, 4), 'utf-8');
+    process.exit(0);
 }
 
 ///////////////////////////////////////////////

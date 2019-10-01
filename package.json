@@ -33,6 +33,9 @@
         "krevent": "latest",
         "minecraft-scripting-types-client": "^1.0.0",
         "minecraft-scripting-types-server": "^1.0.0",
-        "@mcbe/dummy-console": "latest"
+        "@mcbe/dummy-console": "latest",
+        "krchecktimer": "latest",
+        "@mcbe/store": "latest",
+        "@mcbe/scoreboard": "latest"
     }
 }

@@ -28,6 +28,9 @@
         "node_modules/@mcbe/ruacore_server/**/*",
         "node_modules/@mcbe/timer/**/*",
         "node_modules/@mcbe/console/**/*",
-        "node_modules/@mcbe/dummy-console/**/*"
+        "node_modules/@mcbe/dummy-console/**/*",
+        "node_modules/krchecktimer/**/*",
+        "node_modules/@mcbe/store/**/*",
+        "node_modules/@mcbe/scoreboard/**/*"
     ]
 }
