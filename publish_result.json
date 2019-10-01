@@ -27,7 +27,7 @@
         "version": "1.0.2"
     },
     "@mcbe/nexttick": {
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "@mcbe/ruacore_server": {
         "version": "1.0.0"
@@ -39,7 +39,7 @@
         "version": "1.0.1"
     },
     "krlog": {
-        "version": "1.0.2"
+        "version": "1.0.4"
     },
     "@mcbe/dummy-console": {
         "version": "1.0.2"
