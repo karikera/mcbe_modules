@@ -3,7 +3,7 @@
         "version": "1.0.2"
     },
     "@mcbe/ruakr_const": {
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "@mcbe/ruakr_util": {
         "version": "1.0.0"
@@ -15,16 +15,16 @@
         "version": "1.0.0"
     },
     "@mcbe/identifier": {
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "@mcbe/command": {
-        "version": "1.0.4"
+        "version": "1.0.5"
     },
     "@mcbe/event": {
         "version": "1.0.2"
     },
     "@mcbe/lang": {
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "@mcbe/nexttick": {
         "version": "1.0.1"
@@ -48,7 +48,7 @@
         "version": "1.0.0"
     },
     "@mcbe/store": {
-        "version": "1.0.1"
+        "version": "1.0.3"
     },
     "@mcbe/scoreboard": {
         "version": "1.0.0"
