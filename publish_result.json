@@ -18,7 +18,7 @@
         "version": "1.0.1"
     },
     "@mcbe/command": {
-        "version": "1.0.5"
+        "version": "1.0.6"
     },
     "@mcbe/event": {
         "version": "1.0.2"
@@ -45,10 +45,10 @@
         "version": "1.0.2"
     },
     "krchecktimer": {
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "@mcbe/store": {
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "@mcbe/scoreboard": {
         "version": "1.0.0"
