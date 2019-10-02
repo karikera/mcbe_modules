@@ -36,6 +36,8 @@
         "@mcbe/dummy-console": "latest",
         "krchecktimer": "latest",
         "@mcbe/store": "latest",
-        "@mcbe/scoreboard": "latest"
+        "@mcbe/scoreboard": "latest",
+        "@mcbe/system_client": "latest",
+        "@mcbe/ruacore_client": "latest"
     }
 }

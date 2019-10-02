@@ -1,8 +1,6 @@
 /node_modules/*
 !/node_modules/@mcbe
-!/node_modules/@types
 /node_modules/@mcbe/*
-/node_modules/@types/*
 ##<packages>
 !/node_modules/krevent
 !/node_modules/krlog
@@ -13,12 +11,14 @@
 !/node_modules/@mcbe/ruakr_util
 !/node_modules/@mcbe/system_shared
 !/node_modules/@mcbe/system_server
+!/node_modules/@mcbe/system_client
 !/node_modules/@mcbe/identifier
 !/node_modules/@mcbe/command
 !/node_modules/@mcbe/event
 !/node_modules/@mcbe/lang
 !/node_modules/@mcbe/nexttick
 !/node_modules/@mcbe/ruacore_server
+!/node_modules/@mcbe/ruacore_client
 !/node_modules/@mcbe/timer
 !/node_modules/@mcbe/console
 !/node_modules/@mcbe/scoreboard
@@ -26,5 +26,4 @@
 *.js
 *.js.map
 *.d.ts
-!/node_modules/@types/**/*.d.ts
 !/publish.js
