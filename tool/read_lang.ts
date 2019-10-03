@@ -12,7 +12,7 @@ interface LangData
     [key:string]:LangTree;
 }
 
-export function readLang():LangData
+export function readLang(path:string):LangData
 {
     const lang:LangData = {};
     const woolColor = new Map<string, number>([
@@ -352,6 +352,7 @@ export function readLang():LangData
         ['muttonCooked', ['muttoncooked', -1]],
         ['muttonRaw', ['muttonraw', -1]],
         ['charcoal', ['coal', 1]],
+        ['appleEnchanted', ['appleenchanted', -1]],
     ]);
 
 
@@ -455,11 +456,12 @@ export function readLang():LangData
         }
     }
 
-    for (const [name, content] of readFiles("D:\\Downloads\\ME\\Games\\bedrock-server-1.12.0.28\\resource_packs\\vanilla\\texts", ".lang"))
+    for (const [name, content] of readFiles(path, ".lang"))
     {
         if (name !== 'ko_KR' && name !== 'en_US') continue;
         parseLang(name, content);
     }
+    
     
     for (const [name, content] of readFiles("..\\development_resource_packs\\ruarule-rp\\texts", ".lang"))
     {

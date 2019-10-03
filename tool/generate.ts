@@ -14,9 +14,9 @@ case 'id':
 case 'gen_lang':
     const lang = readLang("resource_packs\\vanilla\\texts");
     writeLang('node_module/@mcbe/lang/lang_data.ts', lang);
-    
-    const lang2 = readLang("resource_packs\\vanilla\\texts");
-    writeLang('node_module/@mcbe/lang/lang_data.ts', lang2);
+
+    // const lang2 = readLang("resource_packs\\vanilla\\texts");
+    // writeLang('node_module/@mcbe/lang/lang_data.ts', lang2);
     break;
 case 'gen_schema':
     (async()=>{

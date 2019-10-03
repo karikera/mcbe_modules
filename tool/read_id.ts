@@ -21,7 +21,7 @@ export function readIdFromVanilaPack():void
             };
         };
     }
-    for (const [name, content] of readJsonFiles<Item>('D:\\Downloads\\ME\\Games\\bedrock-server-1.12.0.28\\behavior_packs\\vanilla\\items'))
+    for (const [name, content] of readJsonFiles<Item>('behavior_packs\\vanilla\\items'))
     {
         try
         {
@@ -32,7 +32,7 @@ export function readIdFromVanilaPack():void
         }
     }
         
-    for (const [name, content] of readJsonFiles<SpawnRule>('D:\\Downloads\\ME\\Games\\bedrock-server-1.12.0.28\\behavior_packs\\vanilla\\spawn_rules'))
+    for (const [name, content] of readJsonFiles<SpawnRule>('behavior_packs\\vanilla\\spawn_rules'))
     {
         try
         {

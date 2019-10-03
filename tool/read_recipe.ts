@@ -86,7 +86,7 @@ export function readIdAndRecipeFromVanilaPack():void
         }
     }
     
-    for (const [name, content] of readJsonFiles<RecipeData>("D:\\Downloads\\ME\\Games\\bedrock-server-1.12.0.28\\behavior_packs\\vanilla\\recipes"))
+    for (const [name, content] of readJsonFiles<RecipeData>("behavior_packs\\vanilla\\recipes"))
     {
         try
         {
