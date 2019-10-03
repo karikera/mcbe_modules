@@ -12,8 +12,11 @@ case 'id':
     else console.log(Identifier.getFromMini(process.argv[3]).short);
     break;
 case 'gen_lang':
-    const lang = readLang();
+    const lang = readLang("resource_packs\\vanilla\\texts");
     writeLang('node_module/@mcbe/lang/lang_data.ts', lang);
+    
+    const lang2 = readLang("resource_packs\\vanilla\\texts");
+    writeLang('node_module/@mcbe/lang/lang_data.ts', lang2);
     break;
 case 'gen_schema':
     (async()=>{
@@ -25,6 +28,9 @@ case 'gen_schema':
     break;
 case 'gen_id':
     generateId();
+    break;
+default:
+    console.error('Unknown command: '+process.argv[2]);
     break;
 }
 
