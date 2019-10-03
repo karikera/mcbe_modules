@@ -177,6 +177,7 @@ export const extra_id:string[] = [
     'structure_block',
     'dragon_egg',
     'concrete',
+    'bell',
     
     'stone_slab',
     'stone_slab_2',

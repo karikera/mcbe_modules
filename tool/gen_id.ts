@@ -13,9 +13,9 @@ export function generateId():void
     readIdAndRecipeFromVanilaPack();
     
     // recipe
-    out = fs.createWriteStream('src/lib/recipe_list.ts', 'utf-8');
+    out = fs.createWriteStream('node_modules/@mcbe/recipe/list.ts', 'utf-8');
     out.write(`
-import { Recipe } from "./recipe";
+import { Recipe } from ".";
 import ID from "@mcbe/identifier/id";
 
 export const recipes = new Map([`);
@@ -33,9 +33,9 @@ export const recipes = new Map([`);
     out.end();
 
     // ID
-    out = fs.createWriteStream('src/lib/id.ts', 'utf-8');
+    out = fs.createWriteStream('node_modules/@mcbe/identifier/id.ts', 'utf-8');
     out.write(`
-import MAKEID from "@mcbe/identifier/make";
+import MAKEID from "./make";
 
 export const ID = {
 `);

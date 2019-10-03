@@ -7,8 +7,22 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}\\publish.js"
+            "name": "Publish",
+            "program": "${workspaceFolder}\\tool\\publish.js",
+            "args": ["publish"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test",
+            "program": "${workspaceFolder}\\tool\\publish.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Generate ID",
+            "program": "${workspaceFolder}\\tool\\generate.js",
+            "args": ["id"]
         }
     ]
 }

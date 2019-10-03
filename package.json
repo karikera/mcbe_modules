@@ -20,8 +20,10 @@
         "@mcbe/dummy-console": "latest",
         "@mcbe/event": "latest",
         "@mcbe/identifier": "latest",
+        "@mcbe/item": "latest",
         "@mcbe/lang": "latest",
         "@mcbe/nexttick": "latest",
+        "@mcbe/recipe": "latest",
         "@mcbe/ruacore_client": "latest",
         "@mcbe/ruacore_server": "latest",
         "@mcbe/ruakr_const": "latest",
@@ -40,7 +42,7 @@
         "krlog": "latest",
         "minecraft-scripting-types-client": "^1.0.0",
         "minecraft-scripting-types-server": "^1.0.0",
-        "@mcbe/recipe": "latest",
-        "@mcbe/item": "latest"
+        "node-html-parser": "^1.1.16",
+        "strip-json-comments": "^3.0.1"
     }
 }

@@ -1,5 +1,5 @@
 
-import { Recipe, DeleteTarget } from "../lib/recipe";
+import { Recipe, DeleteTarget } from "@mcbe/recipe";
 import Identifier from "@mcbe/identifier";
 import MAKEID from "@mcbe/identifier/make";
 

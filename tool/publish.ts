@@ -160,6 +160,11 @@ if (tsconfigModified)
     process.exit(0);
 }
 
+if (process.argv[2] !== 'publish')
+{
+    process.exit(0);
+}
+
 ///////////////////////////////////////////////
 // publish
 for (const pkg of packages.values())

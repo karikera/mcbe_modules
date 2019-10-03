@@ -491,6 +491,17 @@ export function writeLang(path:string, lang:LangData):void
 export const lang_data = `);
     out.write(JSON.stringify(lang, null, 4));
     out.write(`;
+function deepFreeze(obj:any):void
+{
+    if (typeof obj === 'function') return;
+    if (typeof obj !== 'object') return;
+    for (const key in obj)
+    {
+        deepFreeze(obj[key]);
+    }
+    Object.freeze(obj);
+}
+deepFreeze(lang_data);
 `);
     out.end();
     

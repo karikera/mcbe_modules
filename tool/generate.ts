@@ -12,7 +12,7 @@ case 'id':
     break;
 case 'gen_lang':
     const lang = readLang();
-    writeLang('src/lib/lang_data.ts', lang);
+    writeLang('node_module/@mcbe/lang/lang_data.ts', lang);
     break;
 case 'gen_schema':
     (async()=>{

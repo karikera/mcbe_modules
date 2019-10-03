@@ -141,6 +141,8 @@ function makeArray(schema:SchemaItem):void
 
 export async function readSchema():Promise<void>
 {
+    debugger;
+    return;
     {
         const readed = await wget('https://minecraft.gamepedia.com/Bedrock_Edition_add-on_documentation');
         const tables = Elements.parse(readed).findByTag('tbody');
