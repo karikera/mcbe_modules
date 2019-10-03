@@ -22,6 +22,8 @@
 !/node_modules/@mcbe/timer
 !/node_modules/@mcbe/console
 !/node_modules/@mcbe/scoreboard
+!/node_modules/@mcbe/recipe
+!/node_modules/@mcbe/item
 ##</packages>
 *.js
 *.js.map

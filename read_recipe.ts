@@ -1,6 +1,6 @@
-import { Recipe } from "../lib/recipe";
-import { ItemStack } from "../server_lib/item";
-import { readJsonFiles } from "./tool_util";
+import { Recipe } from "@mcbe/recipe";
+import { ItemStack } from "@mcbe/item";
+import { readJsonFiles } from "./util";
 import { putRecipe } from "./extra_recipe";
 import Identifier from "@mcbe/identifier";
 

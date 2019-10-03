@@ -1,4 +1,4 @@
-import { readJsonFiles } from "./tool_util";
+import { readJsonFiles } from "./util";
 import { extra_id } from "./extra_id";
 import Identifier from "@mcbe/identifier";
 

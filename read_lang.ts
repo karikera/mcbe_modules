@@ -1,7 +1,5 @@
-import { readFiles, readLines } from "./tool_util";
-import { FSWatcher, WriteStream, createWriteStream } from "fs";
-
-
+import { readFiles, readLines } from "./util";
+import { createWriteStream } from "fs";
 
 interface LangTree
 {

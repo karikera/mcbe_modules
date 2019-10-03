@@ -1,7 +1,8 @@
 
 import fs = require('fs');
-import { webNameToId, wget, firstLine } from '../tool_lib/util';
-import { Elements } from '../tool_lib/elements';
+import { wget, firstLine } from './util';
+import { Elements } from './elements';
+import { webNameToId } from './webname';
 
 export async function readbreaking():Promise<void>
 {
