@@ -8,7 +8,8 @@ import { readLang, writeLang } from "./read_lang";
 switch (process.argv[2])
 {
 case 'id':
-    console.log(Identifier.getFromMini(process.argv[3]).short);
+    if (!process.argv[3]) console.error('Need id input');
+    else console.log(Identifier.getFromMini(process.argv[3]).short);
     break;
 case 'gen_lang':
     const lang = readLang();

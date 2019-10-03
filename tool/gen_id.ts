@@ -37,7 +37,7 @@ export const recipes = new Map([`);
     out.write(`
 import MAKEID from "./make";
 
-export const ID = {
+const ID = {
 `);
     
     for (const id of Identifier.all())
@@ -48,6 +48,8 @@ export const ID = {
         out.write(id.mini);
         out.write(',\n');
     }
-    out.write('};\n');
+    out.write(`};
+export default ID;
+`);
     out.end();
 }
