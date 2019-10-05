@@ -36,6 +36,8 @@
         "node_modules/@mcbe/ruacore_client/**/*",
         "node_modules/@mcbe/recipe/**/*",
         "node_modules/@mcbe/item/**/*",
-        "tool/*"
+        "tool/*",
+        "node_modules/krfileutil/**/*",
+        "node_modules/mcaddon-lang2ts/**/*"
     ]
 }

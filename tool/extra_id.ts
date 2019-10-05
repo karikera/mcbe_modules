@@ -212,6 +212,7 @@ export const extra_id:string[] = [
     'phantom_membrane',
     'rabbit_foot',
     'experience_bottle',
+    'totem',
 
     'record_13',
     'record_cat',

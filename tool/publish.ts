@@ -2,6 +2,7 @@
 import fs = require('fs');
 import cp = require('child_process');
 import path = require('path');
+import { test } from './test';
 
 const cwd = process.cwd();
 const gitignore = fs.readFileSync('.gitignore', 'utf-8');
@@ -162,63 +163,68 @@ if (tsconfigModified)
 
 if (process.argv[2] !== 'publish')
 {
-    process.exit(0);
-}
-
-///////////////////////////////////////////////
-// publish
-for (const pkg of packages.values())
-{
-    if (pkg.isLatest)
-    {
-        latestCount++;
-        continue;
-    }
-
-    console.log(`${pkg.name}@${pkg.json.version}: publishing...`);
-    process.chdir(cwd + pkg.path);
-
-    try
-    {
-        let cmd = 'npm publish';
-        if (pkg.name.startsWith('@'))
-        {
-            cmd += ' --access public';
-        }
-        cp.execSync(cmd);
-        pkg.result.version = pkg.json.version;
-        publishCount++;
-    }
-    catch (err)
-    {
-        const message = err.message;
-        if (message.indexOf('You cannot publish over the previously published versions') !== -1)
-        {
-            console.log(`${pkg.name}: latest`);
-            pkg.result.version = pkg.json.version;
-            latestCount++;
-        }
-        else
-        {
-            console.error(message);
-            errorCount++;
-        }
-    }
-}
-
-process.chdir(cwd);
-fs.writeFileSync('publish_result.json', JSON.stringify(publish_result, null, 4), 'utf-8');
-
-console.log('published: '+publishCount);
-console.log('latest: '+latestCount);
-if (errorCount !== 0)
-{
-    console.error('error: '+errorCount);
+    test().then(()=>{
+        console.log('test done');
+    });
 }
 else
 {
-    console.log('error: '+errorCount);
+    ///////////////////////////////////////////////
+    // publish
+    for (const pkg of packages.values())
+    {
+        if (pkg.isLatest)
+        {
+            latestCount++;
+            continue;
+        }
+
+        console.log(`${pkg.name}@${pkg.json.version}: publishing...`);
+        process.chdir(cwd + pkg.path);
+
+        try
+        {
+            let cmd = 'npm publish';
+            if (pkg.name.startsWith('@'))
+            {
+                cmd += ' --access public';
+            }
+            cp.execSync(cmd);
+            pkg.result.version = pkg.json.version;
+            publishCount++;
+        }
+        catch (err)
+        {
+            const message = err.message;
+            if (message.indexOf('You cannot publish over the previously published versions') !== -1)
+            {
+                console.log(`${pkg.name}: latest`);
+                pkg.result.version = pkg.json.version;
+                latestCount++;
+            }
+            else
+            {
+                console.error(message);
+                errorCount++;
+            }
+        }
+    }
+
+    process.chdir(cwd);
+    fs.writeFileSync('publish_result.json', JSON.stringify(publish_result, null, 4), 'utf-8');
+
+    console.log('published: '+publishCount);
+    console.log('latest: '+latestCount);
+    if (errorCount !== 0)
+    {
+        console.error('error: '+errorCount);
+    }
+    else
+    {
+        console.log('error: '+errorCount);
+    }
+
+    // cp.execSync('npm publish');
+
+
 }
-
-// cp.execSync('npm publish');
-

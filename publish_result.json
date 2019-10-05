@@ -15,7 +15,7 @@
         "version": "1.0.2"
     },
     "@mcbe/identifier": {
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "@mcbe/command": {
         "version": "1.0.12"
@@ -24,7 +24,7 @@
         "version": "1.0.3"
     },
     "@mcbe/lang": {
-        "version": "1.0.4"
+        "version": "1.0.5"
     },
     "@mcbe/nexttick": {
         "version": "1.0.3"
@@ -64,5 +64,11 @@
     },
     "@mcbe/item": {
         "version": "1.0.1"
+    },
+    "krfileutil": {
+        "version": "1.0.0"
+    },
+    "mcaddon-lang2ts": {
+        "version": "1.0.0"
     }
 }

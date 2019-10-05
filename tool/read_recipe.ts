@@ -1,6 +1,6 @@
 import { Recipe } from "@mcbe/recipe";
 import { ItemStack } from "@mcbe/item";
-import { readJsonFiles } from "./util";
+import { readJsonFiles } from "krfileutil";
 import { putRecipe } from "./extra_recipe";
 import Identifier from "@mcbe/identifier";
 

@@ -1,4 +1,4 @@
-import { readJsonFiles } from "./util";
+import { readJsonFiles } from "krfileutil";
 import { extra_id } from "./extra_id";
 import Identifier from "@mcbe/identifier";
 

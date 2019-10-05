@@ -3,7 +3,7 @@ require('source-map-support').install();
 import Identifier from "@mcbe/identifier";
 import { readSchema } from "./read_schema";
 import { generateId } from "./gen_id";
-import { readLang, writeLang } from "./read_lang";
+import { lang2ts } from "mcaddon-lang2ts";
 
 switch (process.argv[2])
 {
@@ -12,11 +12,32 @@ case 'id':
     else console.log(Identifier.getFromMini(process.argv[3]).short);
     break;
 case 'gen_lang':
-    const lang = readLang("resource_packs\\vanilla\\texts");
-    writeLang('node_module/@mcbe/lang/lang_data.ts', lang);
-
-    // const lang2 = readLang("resource_packs\\vanilla\\texts");
-    // writeLang('node_module/@mcbe/lang/lang_data.ts', lang2);
+    const keys:string[] = [];
+    lang2ts(
+        'resource_packs\\vanilla\\texts', 
+        'node_modules/@mcbe/lang/data', 
+        (name, lang)=>{
+            keys.push(name);
+            switch (name)
+            {
+            case 'en_US':
+                lang.item.banner[0] = 'Banner';
+                lang.item.boat[0] = 'Boat';
+                lang.item.dye[0] = 'Dye';
+                lang.item.skull[0] = 'Head';
+                lang.item.sapling[0] = 'Sapling';
+                lang.item.spawn_egg = ['Spawn Egg'];
+                break;
+            case 'ko_KR':
+                lang.item.banner[0] = '배너';
+                lang.item.boat[0] = '보트';
+                lang.item.dye[0] = '염료';
+                lang.item.skull[0] = '머리';
+                lang.item.sapling[0] = '묘목';
+                lang.item.spawn_egg = ['생성 알'];
+                break;
+            }
+        });    
     break;
 case 'gen_schema':
     (async()=>{

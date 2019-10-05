@@ -1,7 +1,7 @@
 
 
 import fs = require('fs');
-import { wget, firstLine } from './util';
+import { wget, firstLine } from 'krfileutil';
 import { Elements } from './elements';
 
 interface SchemaItem
