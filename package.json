@@ -46,6 +46,7 @@
         "source-map-support": "^0.5.13",
         "strip-json-comments": "^3.0.1",
         "krfileutil": "latest",
-        "mcaddon-lang2ts": "latest"
+        "mcaddon-lang2ts": "latest",
+        "krgeometry": "latest"
     }
 }

@@ -6,6 +6,7 @@
 !/node_modules/krlog
 !/node_modules/krchecktimer
 !/node_modules/krfileutil
+!/node_modules/krgeometry
 !/node_modules/mcaddon-lang2ts
 !/node_modules/@mcbe/store
 !/node_modules/@mcbe/dummy-console

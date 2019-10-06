@@ -38,6 +38,7 @@
         "node_modules/@mcbe/item/**/*",
         "tool/*",
         "node_modules/krfileutil/**/*",
-        "node_modules/mcaddon-lang2ts/**/*"
+        "node_modules/mcaddon-lang2ts/**/*",
+        "node_modules/krgeometry/**/*"
     ]
 }
