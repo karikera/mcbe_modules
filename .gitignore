@@ -18,10 +18,10 @@
 !/node_modules/@mcbe/identifier
 !/node_modules/@mcbe/command
 !/node_modules/@mcbe/event
+!/node_modules/@mcbe/event_server
+!/node_modules/@mcbe/event_client
 !/node_modules/@mcbe/lang
 !/node_modules/@mcbe/nexttick
-!/node_modules/@mcbe/ruacore_server
-!/node_modules/@mcbe/ruacore_client
 !/node_modules/@mcbe/timer
 !/node_modules/@mcbe/console
 !/node_modules/@mcbe/scoreboard
