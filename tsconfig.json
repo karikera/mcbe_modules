@@ -39,6 +39,7 @@
         "tool/*",
         "node_modules/krfileutil/**/*",
         "node_modules/mcaddon-lang2ts/**/*",
-        "node_modules/krgeometry/**/*"
+        "node_modules/krgeometry/**/*",
+        "node_modules/@mcbe/farticker/**/*"
     ]
 }

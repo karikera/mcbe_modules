@@ -142,33 +142,31 @@ function checkDependency(pkg:Package):void
     pkg.check = CHECK_PASSED;
 }
 
-for (const pkg of packages.values())
-{
-    checkDependency(pkg);
-}
+(async()=>{
 
-///////////////////////////////////////////////
-// update modified
-if (mainpackageModified)
-{
-    fs.writeFileSync('package.json', JSON.stringify(mainpackage, null, 4), 'utf-8');
-}
+    for (const pkg of packages.values())
+    {
+        checkDependency(pkg);
+    }
+    
+    ///////////////////////////////////////////////
+    // update modified
+    if (mainpackageModified)
+    {
+        fs.writeFileSync('package.json', JSON.stringify(mainpackage, null, 4), 'utf-8');
+    }
 
-if (tsconfigModified)
-{
-    tsconfig.include = [...tsconfigInclude.values()];
-    fs.writeFileSync('tsconfig.json', JSON.stringify(tsconfig, null, 4), 'utf-8');
-    process.exit(0);
-}
+    if (tsconfigModified)
+    {
+        tsconfig.include = [...tsconfigInclude.values()];
+        fs.writeFileSync('tsconfig.json', JSON.stringify(tsconfig, null, 4), 'utf-8');
+        return;
+    }
 
-if (process.argv[2] !== 'publish')
-{
-    test().then(()=>{
-        console.log('test done');
-    });
-}
-else
-{
+    await test();
+    console.log('test done');
+    if (process.argv[2] !== 'publish') return;
+
     ///////////////////////////////////////////////
     // publish
     for (const pkg of packages.values())
@@ -227,4 +225,4 @@ else
     // cp.execSync('npm publish');
 
 
-}
+})();

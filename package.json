@@ -47,6 +47,7 @@
         "strip-json-comments": "^3.0.1",
         "krfileutil": "latest",
         "mcaddon-lang2ts": "latest",
-        "krgeometry": "latest"
+        "krgeometry": "latest",
+        "@mcbe/farticker": "latest"
     }
 }
