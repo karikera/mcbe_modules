@@ -3,7 +3,7 @@
         "version": "1.0.3"
     },
     "@mcbe/ruakr_const": {
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "@mcbe/ruakr_util": {
         "version": "1.0.0"
@@ -15,7 +15,7 @@
         "version": "1.0.3"
     },
     "@mcbe/identifier": {
-        "version": "1.0.4"
+        "version": "1.0.5"
     },
     "@mcbe/command": {
         "version": "1.0.13"
@@ -42,13 +42,13 @@
         "version": "1.0.10"
     },
     "@mcbe/dummy-console": {
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "krchecktimer": {
         "version": "1.0.1"
     },
     "@mcbe/store": {
-        "version": "1.0.9"
+        "version": "1.0.10"
     },
     "@mcbe/scoreboard": {
         "version": "1.0.2"

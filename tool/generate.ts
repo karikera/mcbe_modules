@@ -9,7 +9,7 @@ switch (process.argv[2])
 {
 case 'id':
     if (!process.argv[3]) console.error('Need id input');
-    else console.log(Identifier.getFromMini(process.argv[3]).short);
+    else console.log(Identifier.getFromName(process.argv[3]).minified);
     break;
 case 'gen_lang':
     const keys:string[] = [];

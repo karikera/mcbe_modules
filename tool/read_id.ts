@@ -45,6 +45,6 @@ export function readIdFromVanilaPack():void
     
     for (const id of extra_id)
     {
-        Identifier.getFromMini(id);
+        Identifier.getFromName(id);
     }
 }

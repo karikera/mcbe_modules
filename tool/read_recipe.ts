@@ -185,7 +185,7 @@ export function readIdAndRecipeFromVanilaPack():void
     
             const tags = (furance || shapeless || shaped).tags.map(name=>{
                 if (name === 'stonecutter') name = 'stonecutter_block';
-                return Identifier.getFromMini(name.toLowerCase());
+                return Identifier.getFromName(name.toLowerCase());
             });
             if (!output)
             {

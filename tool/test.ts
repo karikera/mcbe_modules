@@ -92,10 +92,13 @@ import "@mcbe/system_server";
 import { Lang, itemLang } from "@mcbe/lang";
 import lang_data = require("@mcbe/lang/data/en_US");
 import ID from "@mcbe/identifier/id";
+import MAKEID from "@mcbe/identifier/make";
 
 
 export async function test():Promise<void>
 {
+    console.assert(ID.poisonous_potato == MAKEID.poisonous_potato);
+    
     Lang.load(require('@mcbe/lang/data/ko_KR'));
     Lang.mergeLoad(require('@mcbe/lang/data/ko_KR'));
 
