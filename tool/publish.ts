@@ -1,17 +1,11 @@
 
 import fs = require('fs');
 import cp = require('child_process');
-import path = require('path');
 import { test } from './test';
+import { IgnoreList } from './ignorelist';
 
 const cwd = process.cwd();
-const gitignore = fs.readFileSync('.gitignore', 'utf-8');
 const publish_result = JSON.parse(fs.readFileSync('publish_result.json', 'utf-8'));
-
-let lines = gitignore.split(/\r?\n/g);
-
-const start = lines.indexOf('##<packages>')+1;
-const end = lines.indexOf('##</packages>', start);
 
 const mainpackage = JSON.parse(fs.readFileSync('package.json', 'utf-8'));
 let mainpackageModified = false;
@@ -25,7 +19,13 @@ const CHECK_PASSED = -2;
 
 const tsconfig = JSON.parse(fs.readFileSync('tsconfig.json', 'utf-8'));
 let tsconfigModified = false;
-const tsconfigInclude = new Set(tsconfig.include);
+const tsconfigInclude = new Set<string>(tsconfig.include);
+
+const gitignore = new IgnoreList('.gitignore');
+const eslintignore = new IgnoreList('.eslintignore');
+
+gitignore.add(eslintignore.values());
+eslintignore.add(gitignore.values());
 
 class Package
 {
@@ -49,11 +49,11 @@ class Package
             mainpackageModified = true;
             console.log(`${this.name}: added dependency to main package.json`);
         }
-        this.result = publish_result[name]
+        this.result = publish_result[name];
         if (!this.result) publish_result[name] = this.result = {};
     
         this.path = line.substr(1);
-        if (!fs.existsSync(cwd + this.path+'/.npmignore')) console.error(`no .npmignore`);
+        if (!fs.existsSync(cwd + this.path+'/.npmignore')) console.error('no .npmignore');
 
         
         const include = this.path.substr(1)+'/**/*';
@@ -79,12 +79,12 @@ class Package
             this.json = JSON.parse(packagetext);
             if (this.json.name !== this.name)
             {
-                throw Error(`wrong package name`);
+                throw Error('wrong package name');
             }
         }
         catch (err)
         {
-            throw Error(`invalid package.json`);
+            throw Error('invalid package.json');
         }
 
         this.isLatest = this.result.version === this.json.version;
@@ -97,7 +97,7 @@ class Package
 ///////////////////////////////////////////////
 // load packages
 const packages = new Map<string, Package>();
-for (const line of lines.slice(start, end))
+for (const line of gitignore.values())
 {
     if (!line.startsWith('!/node_modules/'))
     {

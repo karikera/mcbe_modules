@@ -22,12 +22,12 @@ export const recipes = new Map([`);
     for (const [id, recipe] of recipes_data)
     {
         if (!id) continue;
-        out.write('\n\t[ID.');
+        out.write('\n    [ID.');
         out.write(id.mini);
-        out.write(',[\n\t\t');
+        out.write(',[\n        ');
         recipe.sort((a,b)=>a.complexCompare(b));
-        out.write(recipe.map(r=>r.toSource()).join(',\n\t\t'));
-        out.write('\n\t]],');
+        out.write(recipe.map(r=>r.toSource()).join(',\n        '));
+        out.write('\n    ]],');
     }
     out.write('\n]);\n');
     out.end();
@@ -42,7 +42,7 @@ const ID = {
     
     for (const id of Identifier.all())
     {
-        out.write('\t');
+        out.write('    ');
         out.write(id.mini);
         out.write(': MAKEID.');
         out.write(id.mini);
