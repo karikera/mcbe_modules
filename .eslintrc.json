@@ -1,24 +1,18 @@
 {
     "env": {
-        "es6": true,
+        "es2017": true,
+        "browser": false,
         "node": true
     },
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended"
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "@typescript-eslint"
-    ],
     "rules": {
         "indent": [
             "error",
@@ -33,6 +27,21 @@
         "no-debugger":"off",
         "no-case-declarations":"off",
         "no-empty":"off",
-        "no-inner-declarations":"off"
+        "no-inner-declarations":"off",
+        "prefer-const": "off",
+        "no-var": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/type-annotation-spacing": "off",
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/camelcase": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/interface-name-prefix": "off",
+        "@typescript-eslint/member-delimiter-style": "off",
+        "@typescript-eslint/no-var-requires": "off"
     }
 }
