@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "lint": "eslint **/*.ts"
+        "lint": "eslint **/*.ts",
+        "publish-all": "node tool/publish.js publish"
     },
     "keywords": [],
     "author": "",

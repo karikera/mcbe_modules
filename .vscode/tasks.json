@@ -30,6 +30,13 @@
                 "$eslint-stylish"
             ],
             "group": "build"
+        },
+        {
+            "label": "Publish All",
+            "type": "npm",
+            "script": "publish-all",
+            "problemMatcher": [],
+            "group": "build"
         }
     ]
 }

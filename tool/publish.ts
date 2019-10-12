@@ -162,7 +162,8 @@ function checkDependency(pkg:Package):void
         fs.writeFileSync('tsconfig.json', JSON.stringify(tsconfig, null, 4), 'utf-8');
     }
 
-    cp.execSync('tsc', {stdio: 'pipe'});
+    console.log('compiling...');
+    cp.execSync('tsc', {stdio: 'inherit'});
 
     await test();
     console.log('test done');
@@ -188,7 +189,7 @@ function checkDependency(pkg:Package):void
             {
                 cmd += ' --access public';
             }
-            cp.execSync(cmd, {stdio: 'pipe'});
+            cp.execSync(cmd);
             pkg.result.version = pkg.json.version;
             publishCount++;
         }
