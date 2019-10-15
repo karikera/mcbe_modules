@@ -189,7 +189,7 @@ function checkDependency(pkg:Package):void
             {
                 cmd += ' --access public';
             }
-            cp.execSync(cmd);
+            cp.execSync(cmd, {stdio:'pipe'});
             pkg.result.version = pkg.json.version;
             publishCount++;
         }

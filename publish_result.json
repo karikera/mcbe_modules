@@ -9,7 +9,7 @@
         "version": "1.0.0"
     },
     "@mcbe/system_shared": {
-        "version": "1.0.9"
+        "version": "1.1.0"
     },
     "@mcbe/system_server": {
         "version": "1.0.3"
@@ -21,7 +21,7 @@
         "version": "1.1.2"
     },
     "@mcbe/event": {
-        "version": "1.0.4"
+        "version": "1.0.5"
     },
     "@mcbe/lang": {
         "version": "1.0.5"
