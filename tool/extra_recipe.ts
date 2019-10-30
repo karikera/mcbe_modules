@@ -396,6 +396,39 @@ recipes_data.set(MAKEID.tripwire_hook, [
 recipes_data.set(MAKEID.tnt, [
     new Recipe([MAKEID.crafting_table],[[MAKEID.sand, 4],[MAKEID.gunpowder, 5]],1)
 ]);
+recipes_data.set(MAKEID.suspicious_stew, [
+    new Recipe([MAKEID.crafting_table],[
+        [MAKEID.red_mushroom, 1],
+        [MAKEID.brown_mushroom, 1],
+        [MAKEID.bowl, 1],
+        [MAKEID.red_flower, 1],
+    ],1)
+]);
+recipes_data.set(MAKEID.suspicious_stew, [
+    new Recipe([MAKEID.crafting_table],[
+        [MAKEID.red_mushroom, 1],
+        [MAKEID.brown_mushroom, 1],
+        [MAKEID.bowl, 1],
+        [MAKEID.yellow_flower, 1],
+    ],1)
+]);
+recipes_data.set(MAKEID.suspicious_stew, [
+    new Recipe([MAKEID.crafting_table],[
+        [MAKEID.red_mushroom, 1],
+        [MAKEID.brown_mushroom, 1],
+        [MAKEID.bowl, 1],
+        [MAKEID.double_plant, 1],
+    ],1)
+]);
+recipes_data.set(MAKEID.suspicious_stew, [
+    new Recipe([MAKEID.crafting_table],[
+        [MAKEID.red_mushroom, 1],
+        [MAKEID.brown_mushroom, 1],
+        [MAKEID.bowl, 1],
+        [MAKEID.wither_rose, 1],
+    ],1)
+]);
+
 
 export function putRecipe(output:Identifier, recipe:Recipe):void
 {

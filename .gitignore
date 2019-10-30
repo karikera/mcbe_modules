@@ -28,6 +28,7 @@
 !/node_modules/@mcbe/recipe
 !/node_modules/@mcbe/item
 !/node_modules/@mcbe/farticker
+!/node_modules/@mcbe/version
 ##</packages>
 *.js
 *.js.map

@@ -191,6 +191,7 @@ export const extra_id:string[] = [
     'end_portal',
     'end_portal_frame',
     'gateway',
+    'light_block',
 
     // items
     'wooden_hoe',
@@ -230,6 +231,8 @@ export const extra_id:string[] = [
     // entity
     'area_effect_cloud',
     'eye_of_ender_signal',
+    'suspicious_stew',
+    'wither_skull_dangerous',
 
     'wandering_trader',
     'villager',

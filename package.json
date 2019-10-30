@@ -55,6 +55,7 @@
         "source-map-support": "^0.5.13",
         "strip-json-comments": "^3.0.1",
         "typedoc": "^0.15.0",
-        "typescript": "^3.6.3"
+        "typescript": "^3.6.3",
+        "@mcbe/version": "latest"
     }
 }
