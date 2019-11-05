@@ -214,6 +214,7 @@ export const extra_id:string[] = [
     'rabbit_foot',
     'experience_bottle',
     'totem',
+    'stickyPistonArmCollision',
 
     'record_13',
     'record_cat',
