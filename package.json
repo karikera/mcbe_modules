@@ -44,7 +44,6 @@
         "eslint": "^6.5.1",
         "eslint-config-minecraft": "^0.1.0",
         "krchecktimer": "^1.0.0",
-        "krevent": "^1.0.0",
         "krfileutil": "latest",
         "krgeometry": "latest",
         "krlog": "^1.0.0",

@@ -1,7 +1,6 @@
 !/node_modules/@mcbe
 /node_modules/@mcbe/*
 ##<packages>
-!/node_modules/krevent
 !/node_modules/krlog
 !/node_modules/krchecktimer
 !/node_modules/krfileutil
