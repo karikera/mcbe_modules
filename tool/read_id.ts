@@ -2,7 +2,7 @@ import { readJsonFiles } from "krfileutil";
 import { extra_id } from "./extra_id";
 import Identifier from "@mcbe/identifier";
 
-export function readIdFromVanilaPack():void
+export function readIdFromBehaviorPack(packname:string):void
 {
     interface Item
     {
@@ -21,7 +21,7 @@ export function readIdFromVanilaPack():void
             };
         };
     }
-    for (const [name, content] of readJsonFiles<Item>('behavior_packs\\vanilla\\items'))
+    for (const [name, content] of readJsonFiles<Item>(`behavior_packs\\${packname}\\items`))
     {
         try
         {
@@ -32,7 +32,7 @@ export function readIdFromVanilaPack():void
         }
     }
         
-    for (const [name, content] of readJsonFiles<SpawnRule>('behavior_packs\\vanilla\\spawn_rules'))
+    for (const [name, content] of readJsonFiles<SpawnRule>(`behavior_packs\\${packname}\\spawn_rules`))
     {
         try
         {

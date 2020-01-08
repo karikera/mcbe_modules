@@ -48,7 +48,7 @@ function splitData(id:string):[Identifier, number?]
     return [Identifier.get(id)];
 }
 
-export function readIdAndRecipeFromVanilaPack():void
+export function readIdAndRecipeFromBehaviorPack(packname:string):void
 {
     interface RecipeData
     {
@@ -84,13 +84,25 @@ export function readIdAndRecipeFromVanilaPack():void
             }[]);
             tags:string[];
         }
+        ['minecraft:recipe_brewing_mix']:{
+            output:string;
+            input:string;
+            reagent:string;
+            tags:string[];
+        }
+        ['minecraft:recipe_brewing_container']:{
+            output:string;
+            input:string;
+            reagent:string;
+        }
     }
     
-    for (const [name, content] of readJsonFiles<RecipeData>("behavior_packs\\vanilla\\recipes"))
+    for (const [name, content] of readJsonFiles<RecipeData>(`behavior_packs\\${packname}\\recipes`))
     {
         try
         {
             const inputs = new Map<Identifier, ItemStack>();
+            const outputs = new Map<Identifier, ItemStack>();
             const putInput = (name:string, count:number)=>{
                 const [id, data] = splitData(name);
 
@@ -98,13 +110,19 @@ export function readIdAndRecipeFromVanilaPack():void
                 if (item) item.count += count;
                 else inputs.set(id, {id, count});
             };
-            let output:[string, number]|undefined;
+            const putOutput = (name:string, count:number)=>{
+                const [id, data] = splitData(name);
+
+                const item = outputs.get(id);
+                if (item) item.count += count;
+                else outputs.set(id, {id, count});
+            };
 
             const furance = content['minecraft:recipe_furnace'];
             if (furance)
             {
                 putInput(furance.input, 1);
-                output = [furance.output, 1];
+                putOutput(furance.output, 1);
             }
             const shapeless = content['minecraft:recipe_shapeless'];
             if (shapeless)
@@ -114,7 +132,7 @@ export function readIdAndRecipeFromVanilaPack():void
                     putInput(item.item, item.count || 1);
                 }
                 const result = shapeless.result;
-                output = [result.item, result.count || 1];
+                putOutput(result.item, result.count || 1);
                 shapeless.tags = shapeless.tags.filter(v=>v !== 'crafting_table');
             }
             const shaped = content['minecraft:recipe_shaped'];
@@ -177,29 +195,42 @@ export function readIdAndRecipeFromVanilaPack():void
                         i++;
                     }
                     console.assert(inputs.size !== 0);
-                    console.assert(result.length === 1);
-                    result = result[0];
+
+                    for (const r of result)
+                    {
+                        putOutput(r.item, r.count || 1);
+                    }
                 }
-                output = [result.item, result.count];
+                else
+                {
+                    putOutput(result.item, result.count || 1);
+                }
+            }
+            const brewing = content['minecraft:recipe_brewing_mix'];
+            if (brewing) continue;
+            
+            const brewing_con = content['minecraft:recipe_brewing_container'];
+            if (brewing_con)
+            {
+                const id = Identifier.getFromName(brewing_con.input.toLowerCase());
+                inputs.set(id, {
+                    id,
+                    count: 1
+                });
+                putOutput(brewing_con.output, 1);
             }
     
-            const tags = (furance || shapeless || shaped).tags.map(name=>{
+            const anything = furance || shapeless || shaped || brewing || brewing_con;
+            if (!anything) debugger;
+            const tags = anything.tags.map(name=>{
                 if (name === 'stonecutter') name = 'stonecutter_block';
                 return Identifier.getFromName(name.toLowerCase());
             });
-            if (!output)
-            {
-                debugger;
-            }
-            else
-            {
-                const [outputId, outputData] = splitData(output[0]);
-                putRecipe(outputId, new Recipe(
-                    tags,
-                    [...inputs.values()].map(item=>[item.id, item.count]),
-                    output[1]
-                ));
-            }
+            putRecipe(new Recipe(
+                tags,
+                [...inputs.values()].map(item=>[item.id, item.count]),
+                [...outputs.values()].map(item=>[item.id, item.count])
+            ));
         }
         catch (err)
         {

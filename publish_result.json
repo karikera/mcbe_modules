@@ -12,7 +12,7 @@
         "version": "1.0.3"
     },
     "@mcbe/identifier": {
-        "version": "1.0.8"
+        "version": "1.0.9"
     },
     "@mcbe/command": {
         "version": "1.1.6"
@@ -51,7 +51,7 @@
         "version": "1.0.2"
     },
     "@mcbe/recipe": {
-        "version": "1.0.2"
+        "version": "1.1.0"
     },
     "@mcbe/item": {
         "version": "1.0.4"

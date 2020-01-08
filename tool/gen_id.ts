@@ -1,5 +1,5 @@
-import { readIdFromVanilaPack } from "./read_id";
-import { readIdAndRecipeFromVanilaPack } from "./read_recipe";
+import { readIdFromBehaviorPack } from "./read_id";
+import { readIdAndRecipeFromBehaviorPack } from "./read_recipe";
 
 import fs = require('fs');
 import { recipes_data } from "./extra_recipe";
@@ -9,8 +9,12 @@ export function generateId():void
 {
     let out:fs.WriteStream;
 
-    readIdFromVanilaPack();
-    readIdAndRecipeFromVanilaPack();
+    readIdFromBehaviorPack('vanilla');
+    readIdFromBehaviorPack('chemistry');
+    readIdFromBehaviorPack('vanilla_1.14');
+    readIdAndRecipeFromBehaviorPack('vanilla');
+    readIdAndRecipeFromBehaviorPack('chemistry');
+    readIdAndRecipeFromBehaviorPack('vanilla_1.14');
     
     // recipe
     out = fs.createWriteStream('node_modules/@mcbe/recipe/list.ts', 'utf-8');

@@ -37,6 +37,13 @@
             "script": "publish-all",
             "problemMatcher": [],
             "group": "build"
+        },
+        {
+            "label": "Generate Id",
+            "type": "npm",
+            "script": "generate-id",
+            "problemMatcher": [],
+            "group": "build"
         }
     ]
 }

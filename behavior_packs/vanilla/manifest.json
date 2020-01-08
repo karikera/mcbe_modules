@@ -1,10 +1,11 @@
 {
-    "format_version": 1,
+    "format_version": 2,
     "header": {
         "description": "resourcePack.vanilla_server.description",
         "name": "resourcePack.vanilla_server.name",
         "uuid": "fe9f8597-5454-481a-8730-8d070a8e2e58",
-        "version": [0, 0, 1]
+        "version": [0, 0, 1],
+        "min_engine_version": [1, 13, 0]
     },
     "modules": [
         {
@@ -15,9 +16,9 @@
         }
     ],
     "dependencies": [
-        {
-            "uuid": "53644fac-a276-42e5-843f-a3c6f169a9ab",
-            "version": [0, 0, 1]
-        }
+      {
+        "uuid": "0575c61f-a5da-4b7f-9961-ffda2908861e",
+        "version": [0, 0, 1]
+      }
     ]
 }
