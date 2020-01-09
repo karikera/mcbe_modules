@@ -92,6 +92,9 @@ import { Lang, itemLang } from "@mcbe/lang";
 import lang_data = require("@mcbe/lang/data/en_US");
 import ID from "@mcbe/identifier/id";
 import MAKEID from "@mcbe/identifier/make";
+import { pickOutOrCraft } from "@mcbe/recipe/make";
+import { ItemList } from "@mcbe/item";
+import { recipes } from "@mcbe/recipe/list";
 
 
 export async function test():Promise<void>
@@ -105,4 +108,50 @@ export async function test():Promise<void>
     console.assert(lang.id === 'en_US');
     itemLang.set('ko_KR');
     console.assert(itemLang.get(ID.ice) === '얼음');
+
+    const list =  new ItemList;
+    for (const rs of recipes.values())
+    {
+        for (const r of rs)
+        {
+            try
+            {
+                list.clear();
+                for (const [item, count] of r.inputs)
+                {
+                    list.add(item, count);
+                }
+                if (pickOutOrCraft(list, r.tools[0], r.outputs[0][0], r.outputs[0][1]) !== 0)
+                {
+                    throw Error('crafting failed');
+                }
+                for (let i=1;i<r.outputs.length;i++)
+                {
+                    const o = r.outputs[i];
+                    if(list.remove(o[0], o[1]) !== 0) throw Error('output unmatch: less output');
+                }
+                // list.clean();
+                // if (list.size() !== 0) console.log('more output');
+            }
+            catch (err)
+            {
+                console.error(err.message);
+                console.log(' [current list]');
+                console.log(list.toString());
+                console.log(' [input]');
+                console.log(r.inputs.map(([item, count])=>item+': '+count).join('\n'));
+                console.log(' [output]');
+                console.log(r.outputs.map(([item, count])=>item+': '+count).join('\n'));
+
+                list.clear();
+                for (const [item, count] of r.inputs)
+                {
+                    list.add(item, count);
+                }
+                debugger;
+                const resultcount = pickOutOrCraft(list, r.tools[0], r.outputs[0][0], r.outputs[0][1]);
+                throw err;
+            }
+        }
+    }
 }

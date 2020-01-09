@@ -162,8 +162,11 @@ function checkDependency(pkg:Package):void
         fs.writeFileSync('tsconfig.json', JSON.stringify(tsconfig, null, 4), 'utf-8');
     }
 
-    console.log('compiling...');
-    cp.execSync('tsc', {stdio: 'inherit'});
+    if (process.argv[2] === 'publish')
+    {
+        console.log('compiling...');
+        cp.execSync('tsc', {stdio: 'inherit'});
+    }
 
     await test();
     console.log('test done');

@@ -2,6 +2,7 @@
 import { Recipe, DeleteTarget } from "@mcbe/recipe";
 import Identifier from "@mcbe/identifier";
 import MAKEID from "@mcbe/identifier/make";
+import { getMainItemForCraft } from "@mcbe/recipe/sort";
 
 export const recipes_data = new Map<Identifier, Recipe[]>();
 
@@ -325,43 +326,37 @@ export function putRecipe(recipe: Recipe): void
     }
     if (recipe.outputs.length === 0) return;
     recipe.outputs.sort((a,b)=>a[0].name.localeCompare(b[0].name));
-
-    for (const o of recipe.outputs)
-    {
-        const arr = recipe.outputs.slice();
-        arr.splice(arr.indexOf(o), 1);
-        arr.unshift(o);
-
-        const recipes = recipes_data.get(o[0]);
-        if (!recipes) {
-            recipes_data.set(o[0], [recipe]);
-            return;
-        }
-    
-        for (let i = 0; i < recipes.length;) {
-            const r = recipes[i];
-            const idx = r.subsetCompare(recipe);
-            if (idx === DeleteTarget.Other) return;
-            if (idx === DeleteTarget.This) {
-                recipes.splice(i, 1);
-                continue;
-            }
-            else {
-                i++;
-            }
-        }
-    
-        // insert before wood
-        if (recipe.inputHas(MAKEID.wood, 1)) {
-            recipes.push(recipe);
-            return;
-        }
-        let i = recipes.length - 1;
-        for (; i >= 0; i--) {
-            const r = recipes[i];
-            if (r.inputHas(MAKEID.wood, 1)) continue;
-            break;
-        }
-        recipes.splice(i + 1, 0, recipe);
+    const output = getMainItemForCraft(recipe.outputs);
+    const recipes = recipes_data.get(output[0]);
+    if (!recipes) {
+        recipes_data.set(output[0], [recipe]);
+        return;
     }
+    if (output[0].name === 'prismarine' && recipe.inputs[0][1] === 9) debugger;
+
+    for (let i = 0; i < recipes.length;) {
+        const r = recipes[i];
+        const idx = r.subsetCompare(recipe);
+        if (idx === DeleteTarget.Other) return;
+        if (idx === DeleteTarget.This) {
+            recipes.splice(i, 1);
+            continue;
+        }
+        else {
+            i++;
+        }
+    }
+
+    // insert before wood
+    if (recipe.inputHas(MAKEID.wood, 1)) {
+        recipes.push(recipe);
+        return;
+    }
+    let i = recipes.length - 1;
+    for (; i >= 0; i--) {
+        const r = recipes[i];
+        if (r.inputHas(MAKEID.wood, 1)) continue;
+        break;
+    }
+    recipes.splice(i + 1, 0, recipe);
 }
