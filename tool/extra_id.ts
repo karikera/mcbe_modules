@@ -238,6 +238,7 @@ export const extra_id:string[] = [
     'wandering_trader',
     'villager',
     'villager_v2',
+    'evocation_illager',
 
     'egg',
     'item',
