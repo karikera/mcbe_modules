@@ -53,7 +53,7 @@ class Package
         if (!this.result) publish_result[name] = this.result = {};
     
         this.path = line.substr(1);
-        if (!fs.existsSync(cwd + this.path+'/.npmignore')) console.error('no .npmignore');
+        if (!fs.existsSync(cwd + this.path+'/.npmignore')) console.error(`${this.path}: .npmignore not found`);
 
         
         const include = this.path.substr(1)+'/**/*';
@@ -71,6 +71,10 @@ class Package
         }
         catch (err)
         {
+            if (err.code === 'ENOENT')
+            {
+                throw Error(`${this.path}: package.json not found`);
+            }
             throw Error(`cannot open package.json, ${err.code}`);
         }
         

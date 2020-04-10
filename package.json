@@ -10,7 +10,7 @@
         "generate-id": "node tool/generate.js gen_id"
     },
     "keywords": [],
-    "author": "",
+    "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
     "license": "ISC",
     "repository": {
         "type": "git",
@@ -56,6 +56,22 @@
         "strip-json-comments": "^3.0.1",
         "typedoc": "^0.15.0",
         "typescript": "^3.6.3",
-        "@mcbe/version": "latest"
+        "@mcbe/version": "latest",
+        "@mcbe/damper": "latest",
+        "@mcbe/entity": "latest",
+        "@mcbe/component": "latest",
+        "@mcbe/ruakr_itemgroup": "latest",
+        "@bdsx/block": "latest",
+        "@bdsx/jsonwatcher": "latest",
+        "@bdsx/logininfo": "latest",
+        "@bdsx/position": "latest",
+        "@bdsx/restoreblock": "latest",
+        "@bdsx/ruakr_db": "latest",
+        "@bdsx/ruakr_logdb": "latest",
+        "@bdsx/ruakr_user": "latest",
+        "@bdsx/logininfo-db": "latest",
+        "@bdsx/ruakr_ban": "latest",
+        "@bdsx/ruakr_userlog": "latest",
+        "@mcbe/ruakr_log": "latest"
     }
 }
