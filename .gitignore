@@ -4,6 +4,7 @@
 /node_modules/@mcbe/*
 /node_modules/@bdsx/*
 ##<packages>
+!/node_modules/krarraymap
 !/node_modules/krlog
 !/node_modules/krchecktimer
 !/node_modules/krfileutil
