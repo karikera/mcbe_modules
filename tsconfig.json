@@ -58,6 +58,7 @@
         "node_modules/@bdsx/ruakr_ban/**/*",
         "node_modules/@bdsx/ruakr_userlog/**/*",
         "node_modules/@bdsx/ruakr_log/**/*",
-        "node_modules/@mcbe/ruakr_log/**/*"
+        "node_modules/@mcbe/ruakr_log/**/*",
+        "node_modules/krarraymap/**/*"
     ]
 }
