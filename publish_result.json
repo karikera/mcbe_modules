@@ -87,7 +87,7 @@
         "version": "1.0.0"
     },
     "@mcbe/component": {
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "@mcbe/ruakr_itemgroup": {
         "version": "1.0.0"
@@ -117,7 +117,7 @@
         "version": "1.0.0"
     },
     "@bdsx/ruakr_user": {
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "@bdsx/logininfo-db": {
         "version": "1.0.0"
