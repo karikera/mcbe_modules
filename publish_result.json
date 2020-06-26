@@ -96,7 +96,7 @@
         "version": "1.0.0"
     },
     "@bdsx/block": {
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "@bdsx/jsonwatcher": {
         "version": "1.0.0"
@@ -105,7 +105,7 @@
         "version": "1.0.0"
     },
     "@bdsx/position": {
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     "@bdsx/restoreblock": {
         "version": "1.0.0"
@@ -117,7 +117,7 @@
         "version": "1.0.0"
     },
     "@bdsx/ruakr_user": {
-        "version": "1.0.1"
+        "version": "1.0.3"
     },
     "@bdsx/logininfo-db": {
         "version": "1.0.0"
@@ -126,6 +126,6 @@
         "version": "1.0.0"
     },
     "@bdsx/ruakr_userlog": {
-        "version": "1.0.1"
+        "version": "1.0.2"
     }
 }

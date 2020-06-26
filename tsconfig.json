@@ -9,9 +9,9 @@
         "sourceMap": true,
         "declaration": true,
         "lib": [
-            "esnext"
+            "es2015"
         ],
-        "target": "esnext"
+        "target": "es2015"
     },
     "include": [
         "node_modules/krlog/**/*",
