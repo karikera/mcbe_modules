@@ -1,4 +1,28 @@
 {
+    "krarraymap": {
+        "version": "1.0.1"
+    },
+    "krlog": {
+        "version": "1.0.11"
+    },
+    "krchecktimer": {
+        "version": "1.0.2"
+    },
+    "krfileutil": {
+        "version": "1.0.0"
+    },
+    "krgeometry": {
+        "version": "1.0.0"
+    },
+    "mcaddon-lang2ts": {
+        "version": "1.0.0"
+    },
+    "@mcbe/store": {
+        "version": "1.0.13"
+    },
+    "@mcbe/dummy-console": {
+        "version": "1.0.5"
+    },
     "@mcbe/ruakr_const": {
         "version": "1.0.4"
     },
@@ -11,6 +35,9 @@
     "@mcbe/system_server": {
         "version": "1.0.3"
     },
+    "@mcbe/system_client": {
+        "version": "1.0.2"
+    },
     "@mcbe/identifier": {
         "version": "1.0.10"
     },
@@ -19,6 +46,12 @@
     },
     "@mcbe/event": {
         "version": "1.0.5"
+    },
+    "@mcbe/event_server": {
+        "version": "1.0.0"
+    },
+    "@mcbe/event_client": {
+        "version": "1.0.0"
     },
     "@mcbe/lang": {
         "version": "1.0.6"
@@ -32,22 +65,7 @@
     "@mcbe/console": {
         "version": "1.0.5"
     },
-    "krlog": {
-        "version": "1.0.11"
-    },
-    "@mcbe/dummy-console": {
-        "version": "1.0.5"
-    },
-    "krchecktimer": {
-        "version": "1.0.2"
-    },
-    "@mcbe/store": {
-        "version": "1.0.13"
-    },
     "@mcbe/scoreboard": {
-        "version": "1.0.2"
-    },
-    "@mcbe/system_client": {
         "version": "1.0.2"
     },
     "@mcbe/recipe": {
@@ -56,28 +74,10 @@
     "@mcbe/item": {
         "version": "1.0.4"
     },
-    "krfileutil": {
-        "version": "1.0.0"
-    },
-    "mcaddon-lang2ts": {
-        "version": "1.0.0"
-    },
-    "krgeometry": {
-        "version": "1.0.0"
-    },
     "@mcbe/farticker": {
         "version": "1.0.4"
     },
-    "@mcbe/event_server": {
-        "version": "1.0.0"
-    },
-    "@mcbe/event_client": {
-        "version": "1.0.0"
-    },
     "@mcbe/version": {
-        "version": "1.0.1"
-    },
-    "krarraymap": {
         "version": "1.0.1"
     },
     "@mcbe/damper": {

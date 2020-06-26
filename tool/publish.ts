@@ -4,8 +4,22 @@ import cp = require('child_process');
 import { test } from './test';
 import { IgnoreList } from './ignorelist';
 
+function openPublishResult()
+{
+    try
+    {
+        const str = fs.readFileSync('publish_result.json', 'utf-8');
+        return JSON.parse(str);
+    }
+    catch (err)
+    {
+        if (err.code != 'ENOENT') throw err;
+        return {};
+    }
+}
+
 const cwd = process.cwd();
-const publish_result = JSON.parse(fs.readFileSync('publish_result.json', 'utf-8'));
+const publish_result = openPublishResult();
 
 const mainpackage = JSON.parse(fs.readFileSync('package.json', 'utf-8'));
 let mainpackageModified = false;
