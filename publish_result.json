@@ -33,10 +33,10 @@
         "version": "1.1.2"
     },
     "@mcbe/system_server": {
-        "version": "1.0.3"
+        "version": "1.0.4"
     },
     "@mcbe/system_client": {
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "@mcbe/identifier": {
         "version": "1.0.10"
@@ -45,7 +45,7 @@
         "version": "1.1.6"
     },
     "@mcbe/event": {
-        "version": "1.0.5"
+        "version": "1.0.6"
     },
     "@mcbe/event_server": {
         "version": "1.0.0"
@@ -54,7 +54,7 @@
         "version": "1.0.0"
     },
     "@mcbe/lang": {
-        "version": "1.0.6"
+        "version": "1.0.7"
     },
     "@mcbe/nexttick": {
         "version": "1.0.6"
@@ -87,7 +87,7 @@
         "version": "1.0.0"
     },
     "@mcbe/component": {
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "@mcbe/ruakr_itemgroup": {
         "version": "1.0.0"
@@ -96,19 +96,19 @@
         "version": "1.0.0"
     },
     "@bdsx/block": {
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "@bdsx/jsonwatcher": {
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "@bdsx/logininfo": {
         "version": "1.0.0"
     },
     "@bdsx/position": {
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     "@bdsx/restoreblock": {
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "@bdsx/ruakr_db": {
         "version": "1.0.0"
@@ -117,15 +117,15 @@
         "version": "1.0.0"
     },
     "@bdsx/ruakr_user": {
-        "version": "1.0.4"
+        "version": "1.0.5"
     },
     "@bdsx/logininfo-db": {
         "version": "1.0.0"
     },
     "@bdsx/ruakr_ban": {
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "@bdsx/ruakr_userlog": {
-        "version": "1.0.3"
+        "version": "1.0.4"
     }
 }
