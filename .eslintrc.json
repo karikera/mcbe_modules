@@ -30,6 +30,7 @@
         "no-inner-declarations":"off",
         "prefer-const": "off",
         "no-var": "off",
+        "prefer-rest-params": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/no-use-before-define": "off",
         "@typescript-eslint/no-unused-vars": "off",
