@@ -1,6 +1,7 @@
 import { readJsonFiles } from "krfileutil";
 import { extra_id } from "./extra_id";
 import Identifier from "@mcbe/identifier";
+import { bdspath } from "./bdspath";
 
 export function readIdFromBehaviorPack(packname:string):void
 {
@@ -21,7 +22,7 @@ export function readIdFromBehaviorPack(packname:string):void
             };
         };
     }
-    for (const [name, content] of readJsonFiles<Item>(`behavior_packs\\${packname}\\items`))
+    for (const [name, content] of readJsonFiles<Item>(`${bdspath}/behavior_packs/${packname}/items`))
     {
         try
         {
@@ -32,7 +33,7 @@ export function readIdFromBehaviorPack(packname:string):void
         }
     }
         
-    for (const [name, content] of readJsonFiles<SpawnRule>(`behavior_packs\\${packname}\\spawn_rules`))
+    for (const [name, content] of readJsonFiles<SpawnRule>(`${bdspath}/behavior_packs/${packname}/spawn_rules`))
     {
         try
         {

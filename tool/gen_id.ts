@@ -10,11 +10,12 @@ export function generateId():void
     let out:fs.WriteStream;
 
     readIdFromBehaviorPack('vanilla');
-    readIdFromBehaviorPack('chemistry');
     readIdFromBehaviorPack('vanilla_1.14');
+    readIdFromBehaviorPack('vanilla_1.15');
+    readIdFromBehaviorPack('vanilla_1.16');
+    readIdFromBehaviorPack('chemistry');
     readIdAndRecipeFromBehaviorPack('vanilla');
     readIdAndRecipeFromBehaviorPack('chemistry');
-    readIdAndRecipeFromBehaviorPack('vanilla_1.14');
     
     // recipe
     out = fs.createWriteStream('node_modules/@mcbe/recipe/list.ts', 'utf-8');
@@ -35,6 +36,7 @@ export const recipes = new Map([`);
     }
     out.write('\n]);\n');
     out.end();
+    console.log(`${recipes_data.size} Recipes generateds.`);
 
     // ID
     out = fs.createWriteStream('node_modules/@mcbe/identifier/id.ts', 'utf-8');
@@ -44,7 +46,10 @@ import MAKEID from "./make";
 const ID = {
 `);
     
-    for (const id of Identifier.all())
+    const ids = [...Identifier.all()];
+    ids.sort((a,b)=>a.name.localeCompare(b.name));
+
+    for (const id of ids)
     {
         out.write('    ');
         out.write(id.mini);
@@ -56,4 +61,5 @@ const ID = {
 export default ID;
 `);
     out.end();
+    console.log(`${ids.length} ID generateds.`);
 }

@@ -281,7 +281,15 @@ addRecipe(MAKEID.suspicious_stew, [MAKEID.crafting_table], [
     [MAKEID.bowl, 1],
     [MAKEID.wither_rose, 1],
 ]);
+addRecipe([
+    [MAKEID.sugar, 3],
+    [MAKEID.glass_bottle, 1],
+], [], [[MAKEID.honey_bottle, 1]]);
 
+addRecipe(MAKEID.beehive, [MAKEID.crafting_table], [[MAKEID.planks, 6],[MAKEID.honeycomb, 3],]);
+addRecipe(MAKEID.honeycomb_block, [], [[MAKEID.honeycomb, 4],]);
+addRecipe(MAKEID.honey_block, [], [[MAKEID.honey_bottle, 4],]);
+addRecipe(MAKEID.honey_bottle, [], [[MAKEID.honey_block, 1],[MAKEID.glass_bottle, 4],]);
 
 export function putRecipe(recipe: Recipe): void
 {

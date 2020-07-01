@@ -4,6 +4,7 @@ import Identifier from "@mcbe/identifier";
 import { readSchema } from "./read_schema";
 import { generateId } from "./gen_id";
 import { lang2ts } from "mcaddon-lang2ts";
+import { bdspath } from "./bdspath";
 
 switch (process.argv[2])
 {
@@ -14,7 +15,7 @@ case 'id':
 case 'gen_lang':
     const keys:string[] = [];
     lang2ts(
-        'resource_packs\\vanilla\\texts', 
+        `${bdspath}/resource_packs/vanilla/texts`, 
         'node_modules/@mcbe/lang/data', 
         (name, lang)=>{
             keys.push(name);

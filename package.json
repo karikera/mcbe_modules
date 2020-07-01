@@ -7,6 +7,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "eslint **/*.ts",
         "publish-all": "node tool/publish.js publish",
+        "generate-lang": "node tool/generate.js gen_lang",
         "generate-id": "node tool/generate.js gen_id"
     },
     "keywords": [],

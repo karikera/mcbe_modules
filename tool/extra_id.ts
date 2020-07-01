@@ -246,6 +246,11 @@ export const extra_id:string[] = [
     'fishing_hook',
     'xp_orb',
     'xp_bottle',
+    
+    'honeycomb',
+    'bee',
+    'beehive',
+    'honeycomb_block',
 
     'element_0',
     'element_1',

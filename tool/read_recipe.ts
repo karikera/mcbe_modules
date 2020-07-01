@@ -3,6 +3,7 @@ import { ItemStack } from "@mcbe/item";
 import { readJsonFiles } from "krfileutil";
 import { putRecipe } from "./extra_recipe";
 import Identifier from "@mcbe/identifier";
+import { bdspath } from "./bdspath";
 
 function isMiniPattern(pattern:string[]):boolean
 {
@@ -97,7 +98,7 @@ export function readIdAndRecipeFromBehaviorPack(packname:string):void
         }
     }
     
-    for (const [name, content] of readJsonFiles<RecipeData>(`behavior_packs\\${packname}\\recipes`))
+    for (const [name, content] of readJsonFiles<RecipeData>(`${bdspath}/behavior_packs/${packname}/recipes`))
     {
         try
         {
