@@ -5,50 +5,73 @@
         return {
             executeCommand(command: string, callback: (callback: IExecuteCommandCallback) => void):void
             {
-                const full = command;
+                let readfrom = 0;
+                let readto = 0;
                 function shift():string
                 {
-                    if (command.charAt(0) === '"')
+                    readfrom = readto;
+                    if (command.charAt(readto) === '"')
                     {
-                        const idx = command.indexOf('"', 1);
+                        const idx = command.indexOf('"', readto+1);
                         if (idx === -1)
                         {
                             const out = command;
-                            command = '';
+                            readto = command.length;
                             return out;
                         }
                         const idx2 = command.indexOf(' ', idx+1);
-                        const out = command.substr(0, idx2);
-                        command = command.substr(idx2+1);
+                        const out = command.substr(readto, idx2);
+                        readto = idx2 + 1;
                         return out;
                     }
                     else
                     {
-                        const idx = command.indexOf(' ');
+                        const idx = command.indexOf(' ', readto);
                         if (idx === -1)
                         {
                             const out = command;
-                            command = '';
+                            readto = command.length;
                             return out;
                         }
                         const out = command.substr(0, idx);
-                        command = command.substr(idx+1);
+                        readto = idx + 1;
                         return out;
                     }
                 }
 
                 
-                function filteredShift<NAMES extends string>(...names:NAMES[]):NAMES
+                function filteredShift<NAMES extends string>(...names:NAMES[]):NAMES|null
                 {
                     const name = shift();
                     for (const filter of names)
                     {
                         if (name === filter) return name as NAMES;
                     }
-                    throw Error(`Not supported command: ${full} (unknown syntax: ${name})`);
+                
+                    setTimeout(()=>{
+                        const params = [
+                            command.substr(0, readfrom), 
+                            command.substring(readfrom, readto-1), 
+                            command.substr(readto-1)
+                        ];
+                        callback({
+                            command,
+                            data:{
+                                statusMessage:lang_data.commands.generic_syntax.replace(/%([0-9]$)?s/g, (str,v)=>{
+                                    if (v)
+                                    {
+                                        return params[parseInt(v.substr(0, v.length - 1))];
+                                    }
+                                    return v;
+                                }),
+                                statusCode:-1
+                            } as any
+                        });
+                    }, 0);
+                    return null;
                 }
 
-                console.log('command: '+ full);
+                console.log('command: '+ command);
                 switch (filteredShift('scoreboard'))
                 {
                 case 'scoreboard':
@@ -71,6 +94,7 @@
                                         } as any
                                     });
                                 }, 0);
+                                return;
                             }
                             else
                             {
