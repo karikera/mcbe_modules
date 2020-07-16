@@ -290,8 +290,8 @@ addRecipe(MAKEID.beehive, [MAKEID.crafting_table], [[MAKEID.planks, 6],[MAKEID.h
 addRecipe(MAKEID.honeycomb_block, [], [[MAKEID.honeycomb, 4],]);
 addRecipe(MAKEID.honey_block, [], [[MAKEID.honey_bottle, 4],]);
 addRecipe(MAKEID.honey_bottle, [], [[MAKEID.honey_block, 1],[MAKEID.glass_bottle, 4],]);
-addRecipe(MAKEID.netherite_scrab, [MAKEID.furnace, MAKEID.blast_furnace], [[MAKEID.ancient_debris, 1]]);
-addRecipe(MAKEID.netherite_ingot, [MAKEID.crafting_table], [[MAKEID.gold_ingot, 4], [MAKEID.netherite_scrab, 4]]);
+addRecipe(MAKEID.netherite_scrap, [MAKEID.furnace, MAKEID.blast_furnace], [[MAKEID.ancient_debris, 1]]);
+addRecipe(MAKEID.netherite_ingot, [MAKEID.crafting_table], [[MAKEID.gold_ingot, 4], [MAKEID.netherite_scrap, 4]]);
 addRecipe(MAKEID.netherite_block, [MAKEID.crafting_table], [[MAKEID.netherite_ingot, 9]]);
 addRecipe(MAKEID.chain, [MAKEID.crafting_table], [[MAKEID.iron_nugget, 2], [MAKEID.iron_ingot, 1]]);
 addRecipe(MAKEID.nether_brick, [], [[MAKEID.double_stone_slab, 2]]);
