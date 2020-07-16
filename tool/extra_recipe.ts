@@ -290,6 +290,54 @@ addRecipe(MAKEID.beehive, [MAKEID.crafting_table], [[MAKEID.planks, 6],[MAKEID.h
 addRecipe(MAKEID.honeycomb_block, [], [[MAKEID.honeycomb, 4],]);
 addRecipe(MAKEID.honey_block, [], [[MAKEID.honey_bottle, 4],]);
 addRecipe(MAKEID.honey_bottle, [], [[MAKEID.honey_block, 1],[MAKEID.glass_bottle, 4],]);
+addRecipe(MAKEID.netherite_scrab, [MAKEID.furnace, MAKEID.blast_furnace], [[MAKEID.ancient_debris, 1]]);
+addRecipe(MAKEID.netherite_ingot, [MAKEID.crafting_table], [[MAKEID.gold_ingot, 4], [MAKEID.netherite_scrab, 4]]);
+addRecipe(MAKEID.netherite_block, [MAKEID.crafting_table], [[MAKEID.netherite_ingot, 9]]);
+addRecipe(MAKEID.chain, [MAKEID.crafting_table], [[MAKEID.iron_nugget, 2], [MAKEID.iron_ingot, 1]]);
+addRecipe(MAKEID.nether_brick, [], [[MAKEID.double_stone_slab, 2]]);
+addRecipe(MAKEID.lodestone, [], [[MAKEID.netherite_ingot, 1], [MAKEID.stonebrick, 8]]);
+addRecipe(MAKEID.lodestonecompass, [], [[MAKEID.compass, 1]]);
+addRecipe(MAKEID.gold, [MAKEID.furnace, MAKEID.blast_furnace], [[MAKEID.nether_gold_ore, 1]]);
+addRecipe([[MAKEID.polished_basalt, 4]], [], [[MAKEID.basalt, 4]]);
+addRecipe([[MAKEID.polished_blackstone, 4]], [], [[MAKEID.blackstone, 4]]);
+addRecipe([[MAKEID.polished_blackstone_bricks, 4]], [], [[MAKEID.polished_blackstone, 4]]);
+addRecipe(MAKEID.cracked_polished_blackstone_bricks, [MAKEID.furnace, MAKEID.blast_furnace], [[MAKEID.polished_blackstone_bricks, 1]]);
+addRecipe(MAKEID.chiseled_polished_blackstone, [], [[MAKEID.polished_blackstone_slab, 2]]);
+addRecipe([[MAKEID.blackstone_slab, 2]], 
+    [MAKEID.stonecutter_block], 
+    [[MAKEID.blackstone, 1]]);
+addRecipe([[MAKEID.blackstone_slab, 6]], 
+    [MAKEID.crafting_table], 
+    [[MAKEID.blackstone, 3]]);
+addRecipe([[MAKEID.polished_blackstone_slab, 2]], 
+    [MAKEID.stonecutter_block], 
+    [[MAKEID.polished_blackstone, 1]]);
+addRecipe([[MAKEID.polished_blackstone_slab, 6]], 
+    [MAKEID.crafting_table], 
+    [[MAKEID.polished_blackstone, 3]]);
+addRecipe([[MAKEID.polished_blackstone_brick_slab, 2]], 
+    [MAKEID.stonecutter_block], 
+    [[MAKEID.polished_blackstone_brick, 1]]);
+addRecipe([[MAKEID.polished_blackstone_brick_slab, 6]], 
+    [MAKEID.crafting_table], 
+    [[MAKEID.polished_blackstone_brick, 3]]);
+addRecipe([[MAKEID.quartz_bricks, 4]], [], [[MAKEID.quartz_block, 4]]);
+addRecipe(MAKEID.respawn_anchor, [], [[MAKEID.glowstone, 3], [MAKEID.crying_obsidian, 6]]);
+addRecipe(MAKEID.soul_campfire, [], [[MAKEID.wood, 3], [MAKEID.stick, 3], [MAKEID.soul_sand, 1]]);
+addRecipe(MAKEID.soul_campfire, [], [[MAKEID.wood, 3], [MAKEID.stick, 3], [MAKEID.soul_soil, 1]]);
+addRecipe(MAKEID.soul_lantern, [], [[MAKEID.iron_ingot, 8], [MAKEID.soul_torch, 1]]);
+addRecipe(MAKEID.soul_torch, [], [[MAKEID.coal, 1], [MAKEID.stick, 1], [MAKEID.soul_sand, 1]]);
+addRecipe(MAKEID.target, [], [[MAKEID.hay_block, 1], [MAKEID.redstone, 4]]);
+addRecipe(MAKEID.netherite_helmet, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_helmet, 1]]);
+addRecipe(MAKEID.netherite_chestplate, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_chestplate, 1]]);
+addRecipe(MAKEID.netherite_leggings, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_leggings, 1]]);
+addRecipe(MAKEID.netherite_boots, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_boots, 1]]);
+addRecipe(MAKEID.netherite_axe, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_axe, 1]]);
+addRecipe(MAKEID.netherite_hoe, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_hoe, 1]]);
+addRecipe(MAKEID.netherite_pickaxe, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_pickaxe, 1]]);
+addRecipe(MAKEID.netherite_shovel, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_shovel, 1]]);
+addRecipe(MAKEID.warped_fungus_on_a_stick, [], [[MAKEID.fishing_rod, 1], [MAKEID.warped_fungus, 1]]);
+
 
 export function putRecipe(recipe: Recipe): void
 {
