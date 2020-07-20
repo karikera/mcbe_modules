@@ -328,14 +328,14 @@ addRecipe(MAKEID.soul_campfire, [], [[MAKEID.wood, 3], [MAKEID.stick, 3], [MAKEI
 addRecipe(MAKEID.soul_lantern, [], [[MAKEID.iron_ingot, 8], [MAKEID.soul_torch, 1]]);
 addRecipe(MAKEID.soul_torch, [], [[MAKEID.coal, 1], [MAKEID.stick, 1], [MAKEID.soul_sand, 1]]);
 addRecipe(MAKEID.target, [], [[MAKEID.hay_block, 1], [MAKEID.redstone, 4]]);
-addRecipe(MAKEID.netherite_helmet, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_helmet, 1]]);
-addRecipe(MAKEID.netherite_chestplate, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_chestplate, 1]]);
-addRecipe(MAKEID.netherite_leggings, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_leggings, 1]]);
-addRecipe(MAKEID.netherite_boots, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_boots, 1]]);
-addRecipe(MAKEID.netherite_axe, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_axe, 1]]);
-addRecipe(MAKEID.netherite_hoe, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_hoe, 1]]);
-addRecipe(MAKEID.netherite_pickaxe, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_pickaxe, 1]]);
-addRecipe(MAKEID.netherite_shovel, [MAKEID.smithing_table], [[MAKEID.nether_ingot, 1], [MAKEID.diamond_shovel, 1]]);
+addRecipe(MAKEID.netherite_helmet, [MAKEID.smithing_table], [[MAKEID.netherite_ingot, 1], [MAKEID.diamond_helmet, 1]]);
+addRecipe(MAKEID.netherite_chestplate, [MAKEID.smithing_table], [[MAKEID.netherite_ingot, 1], [MAKEID.diamond_chestplate, 1]]);
+addRecipe(MAKEID.netherite_leggings, [MAKEID.smithing_table], [[MAKEID.netherite_ingot, 1], [MAKEID.diamond_leggings, 1]]);
+addRecipe(MAKEID.netherite_boots, [MAKEID.smithing_table], [[MAKEID.netherite_ingot, 1], [MAKEID.diamond_boots, 1]]);
+addRecipe(MAKEID.netherite_axe, [MAKEID.smithing_table], [[MAKEID.netherite_ingot, 1], [MAKEID.diamond_axe, 1]]);
+addRecipe(MAKEID.netherite_hoe, [MAKEID.smithing_table], [[MAKEID.netherite_ingot, 1], [MAKEID.diamond_hoe, 1]]);
+addRecipe(MAKEID.netherite_pickaxe, [MAKEID.smithing_table], [[MAKEID.netherite_ingot, 1], [MAKEID.diamond_pickaxe, 1]]);
+addRecipe(MAKEID.netherite_shovel, [MAKEID.smithing_table], [[MAKEID.netherite_ingot, 1], [MAKEID.diamond_shovel, 1]]);
 addRecipe(MAKEID.warped_fungus_on_a_stick, [], [[MAKEID.fishing_rod, 1], [MAKEID.warped_fungus, 1]]);
 
 
