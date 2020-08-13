@@ -251,6 +251,7 @@ export const extra_id:string[] = [
     'bee',
     'beehive',
     'honeycomb_block',
+    'cracked_polished_blackstone_bricks',
 
     'element_0',
     'element_1',
