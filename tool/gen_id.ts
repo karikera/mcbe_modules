@@ -52,9 +52,9 @@ const ID = {
     for (const id of ids)
     {
         out.write('    ');
-        out.write(id.mini);
+        out.write(id.name);
         out.write(': MAKEID.');
-        out.write(id.mini);
+        out.write(id.name);
         out.write(',\n');
     }
     out.write(`};

@@ -2,13 +2,13 @@
 ## What is this?
 This is compilations of my packages  
 Packages will depart when they grow big enough  
-It's VSCode Project  
+It's a VSCode Project  
 
 ## source in node_modules
 It contains source code in node_modules directory to manage multiple packages  
-And It makes bug by npm  
+And It makes bugs by npm  
 Projects will clean by npm when use `npm install`  
-Please commit modified source before use `npm install` and revert it
+Please commit modified sources before use `npm install` and revert it
 
 ## Launch
 It have 4 launch options by VSCode

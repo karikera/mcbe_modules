@@ -336,6 +336,7 @@ addRecipe(MAKEID.netherite_axe, [MAKEID.smithing_table], [[MAKEID.netherite_ingo
 addRecipe(MAKEID.netherite_hoe, [MAKEID.smithing_table], [[MAKEID.netherite_ingot, 1], [MAKEID.diamond_hoe, 1]]);
 addRecipe(MAKEID.netherite_pickaxe, [MAKEID.smithing_table], [[MAKEID.netherite_ingot, 1], [MAKEID.diamond_pickaxe, 1]]);
 addRecipe(MAKEID.netherite_shovel, [MAKEID.smithing_table], [[MAKEID.netherite_ingot, 1], [MAKEID.diamond_shovel, 1]]);
+addRecipe(MAKEID.netherite_sword, [MAKEID.smithing_table], [[MAKEID.netherite_ingot, 1], [MAKEID.diamond_sword, 1]]);
 addRecipe(MAKEID.warped_fungus_on_a_stick, [], [[MAKEID.fishing_rod, 1], [MAKEID.warped_fungus, 1]]);
 
 
