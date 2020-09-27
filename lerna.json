@@ -1,0 +1,8 @@
+{
+  "packages": [
+    "packages/*",
+    "packages/@bdsx/*",
+    "packages/@mcbe/*"
+  ],
+  "version": "0.0.0"
+}
