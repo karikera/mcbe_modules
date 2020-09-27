@@ -37,7 +37,6 @@
 !/node_modules/@mcbe/ruakr_itemgroup
 !/node_modules/@mcbe/ruakr_log
 !/node_modules/@bdsx/block
-!/node_modules/@bdsx/jsonwatcher
 !/node_modules/@bdsx/logininfo
 !/node_modules/@bdsx/position
 !/node_modules/@bdsx/restoreblock
