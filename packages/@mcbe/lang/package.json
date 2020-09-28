@@ -17,11 +17,11 @@
       "escape-string-regexp": "^2.0.0",
       "@mcbe/ruakr_const": "^1.0.0",
       "@mcbe/system_server": "^1.0.0",
-      "@mcbe/ruakr_util": "^1.0.0",
-      "@mcbe/identifier": "^1.0.0"
+      "@mcbe/ruakr_util": "^1.0.0"
     },
     "peerDependencies": {
-      "@mcbe/system_shared": "1.x"
+      "@mcbe/system_shared": "1.x",
+      "@mcbe/identifier": "^1.0.0"
     }
   }
   

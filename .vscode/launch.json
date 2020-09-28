@@ -7,13 +7,6 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Publish",
-            "program": "${workspaceFolder}\\tool\\publish.js",
-            "args": ["publish"]
-        },
-        {
-            "type": "node",
-            "request": "launch",
             "name": "Test",
             "program": "${workspaceFolder}\\tool\\publish.js"
         },

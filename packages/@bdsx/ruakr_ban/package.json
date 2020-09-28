@@ -16,7 +16,6 @@
         "@mcbe/ruakr_log": "^1.0.0",
         "@mcbe/damper": "^1.0.0",
         "@mcbe/ruakr_itemgroup": "^1.0.0",
-        "@mcbe/identifier": "^1.0.0",
         "krjsonwatcher": "^1.0.0",
         "@bdsx/logininfo-db": "^1.0.0",
         "@bdsx/ruakr_user": "^1.0.0",
@@ -24,6 +23,7 @@
         "@bdsx/restoreblock": "^1.0.0"
     },
     "peerDependencies": {
+      "@mcbe/identifier": "^1.0.0",
       "bdsx": "1.x"
     }
 }

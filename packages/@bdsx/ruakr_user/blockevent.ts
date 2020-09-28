@@ -23,7 +23,7 @@ type Events = typeof events;
 
 class BlockEvent<T extends (...args:any[])=>(void|boolean)>
 {
-    private readonly map = new WeakMap<Identifier, Event<any>>();
+    private readonly map = new WeakMap<Identifier, Event<T>>();
 
     constructor()
     {
@@ -33,7 +33,7 @@ class BlockEvent<T extends (...args:any[])=>(void|boolean)>
     on(block:Identifier, fn:T):void
     {
         let ev = this.map.get(block);
-        if (!ev) this.map.set(block, ev = new Event<any>());
+        if (!ev) this.map.set(block, ev = new Event<T>());
         ev.on(fn);
     }
 
@@ -42,7 +42,7 @@ class BlockEvent<T extends (...args:any[])=>(void|boolean)>
         const block:Block = args[1];
         const ev = this.map.get(block.id);
         if (!ev) return false;
-        return ev.fire(...args);
+        return ev.fire(...args) as boolean;
     }
 }
 

@@ -1,8 +1,8 @@
 
-import { Vector3, Box, IVector3 } from "krgeometry";
+import { Vector3, IVector3 } from "krgeometry";
 
-import ID from "@mcbe/identifier/id";
 import Identifier from "@mcbe/identifier";
+import ID from "@mcbe/identifier/id";
 import { NextTick, callAtNextTick } from "@mcbe/nexttick";
 import { entiresOf } from "@mcbe/ruakr_util";
 import { system, command, tellraw } from "@mcbe/system_server";
@@ -295,7 +295,7 @@ class Placings
     {
         if (this.placeBlock)
         {
-            console.error(`${this.user}: PlaceBlock exists when interect (block=${this.placeBlock}, interect=${interectBlock})`)
+            console.error(`${this.user}: PlaceBlock exists when interect (block=${this.placeBlock}, interect=${interectBlock})`);
             this.placeBlock = null;
         }
         if (!this.item) return;
@@ -306,9 +306,9 @@ class Placings
             placeBlock = Block.make(this.item, 0, interectBlock.pos.add(Vector3.Y), this.user);
         }
         else if (interectBlock.isSlab() && (
-                this.item === interectBlock.id ||
+            this.item === interectBlock.id ||
                 (this.item === ID.wooden_slab && interectBlock.id === ID.double_wooden_slab)
-            ))
+        ))
         {
             placeBlock = interectBlock;
         }
@@ -387,7 +387,7 @@ export class User implements UserLike
 
     // position
     public position:Position;
-    public movedStartTest:number = 0;
+    public movedStartTest = 0;
 
     public hand:Identifier = ID.undefined;
     private cancelIterectRequested:NextTick|null = null;
@@ -415,7 +415,7 @@ export class User implements UserLike
         this.storage = User.store.create(name);
         this.xuid = loginInfo.xuid;
         this.ip = loginInfo.ip;
-        this.ni = loginInfo.ni;
+        this.ni = loginInfo.ni as NetworkIdentifier;
 
         this.extras = extras.map(ctor=>new ctor(this));
         extraEvents.onNew.fire(this);
@@ -1073,7 +1073,7 @@ events.listen.EntityAcquiredItem(data=>{
     {
         console.error(`${user}: acquire count unmatch: ${data.item_stack.count} != ${data.acquired_amount}`);
     }
-    user.onAcquiredItem(item, data.acquired_amount, <AcquationMethod>data.acquisition_method, data.secondary_entity);
+    user.onAcquiredItem(item, data.acquired_amount, data.acquisition_method as AcquationMethod, data.secondary_entity);
 });
 events.listen.BlockInteractedWith(data=>{
     const user = User.getInstance(data.player)!;

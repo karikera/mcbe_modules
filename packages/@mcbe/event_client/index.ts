@@ -1,27 +1,23 @@
 import "@mcbe/system_client";
-import { createBroadcast, evitem, createListener, sharedEvents } from "@mcbe/event";
+import { BroadcastMapped, createBroadcast, createListener, ListenerMapped, sharedEvents } from "@mcbe/event";
+import Event from "krevent";
+import { ReceiveFromMap, SendToMap } from "./typemap";
 
-const events = {
+export interface Events
+{
+    initialize: Event<()=>void>;
+    shutdown: Event<()=>void>;
+    update: Event<()=>void>;
+    broadcast: BroadcastMapped<SendToMap>;
+    listen: ListenerMapped<ReceiveFromMap>;
+}
+
+const events:Events = {
     initialize:sharedEvents.initialize,
     shutdown:sharedEvents.shutdown,
     update:sharedEvents.update,
-    broadcast: createBroadcast({
-        DisplayChat: evitem<IDisplayChatParameters>(SendToMinecraftClient.DisplayChat),
-        LoadUI: evitem<ILoadUIParameters>(SendToMinecraftClient.LoadUI),
-        ScriptLoggerConfig: evitem<IScriptLoggerConfigParameters>(SendToMinecraftClient.ScriptLoggerConfig),
-        SendUIEvent: evitem<ISendUIEventParameters>(SendToMinecraftClient.SendUIEvent),
-        SpawnParticleAttachedEntity: evitem<ISpawnParticleAttachedEntityParameters>(SendToMinecraftClient.SpawnParticleAttachedEntity),
-        SpawnParticleInWorld: evitem<ISpawnParticleInWorldParameters>(SendToMinecraftClient.SpawnParticleInWorld),
-        UnloadUI: evitem<IUnloadUIParameters>(SendToMinecraftClient.UnloadUI),
-    }),
-    listen: createListener({
-        ClientEnteredWorld: evitem<IClientEnteredWorldEventData>(ReceiveFromMinecraftClient.ClientEnteredWorld),
-        HitResultChanged: evitem<IHitResultChangedEventData>(ReceiveFromMinecraftClient.HitResultChanged),
-        HitResultContinuous: evitem<IHitResultContinuousEventData>(ReceiveFromMinecraftClient.HitResultContinuous),
-        PickHitResultChanged: evitem<IPickHitResultChangedEventData>(ReceiveFromMinecraftClient.PickHitResultChanged),
-        PickHitResultContinuous: evitem<IPickHitResultContinuousEventData>(ReceiveFromMinecraftClient.PickHitResultContinuous),
-        UIEvent: evitem<string>(ReceiveFromMinecraftClient.UIEvent),
-    }),
+    broadcast: createBroadcast(SendToMap),
+    listen: createListener(ReceiveFromMap),
 };
 Object.freeze(events);
 

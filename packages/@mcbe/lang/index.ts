@@ -6,7 +6,7 @@ import { entiresOf } from '@mcbe/ruakr_util';
 import Identifier from '@mcbe/identifier';
 import en_US = require('./data/en_US');
 import { LangId } from './data/langid';
-import { freeze } from '@mcbe/lang/data/freeze';
+import { freeze } from './data/freeze';
 
 import '@mcbe/system_shared/require_d';
 

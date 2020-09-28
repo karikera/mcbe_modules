@@ -6,7 +6,7 @@ import { Box } from "krgeometry";
 import { command } from "@mcbe/system_server";
 import Identifier from "@mcbe/identifier";
 import ID from "@mcbe/identifier/id";
-import { setblockWithoutError } from "@mcbe/command";
+import { silentCommander } from "@mcbe/command";
 import ruacore from "@mcbe/event_server";
 import { Lang } from "@mcbe/lang";
 import { realTime } from "@mcbe/timer/realtime";
@@ -87,7 +87,7 @@ class Processing
             const block = this.blocks[this.index];
 
             processing.delete(this);
-            const res = await setblockWithoutError(pos, block[0], block[1]);
+            const res = await silentCommander.setblock(pos, block[0], block[1]);
             if (this.removed) return;
             if (!res)
             {
@@ -186,13 +186,13 @@ export function setFarTicker(pos:VectorXYZ, area:Box, cb:()=>Promise<boolean>|bo
  */
 export async function setFarBlock(pos:VectorXYZ, block:Identifier, data?:number):Promise<void>
 {
-    const res = await setblockWithoutError(pos, block, data);
+    const res = await silentCommander.setblock(pos, block, data);
     if (res) return;
 
     const second = block === ID.stone ? ID.dirt : ID.stone;
     await addProcessing(pos, Box.fromVector(pos, pos), [[block, data], [second]], last => {
         if (last === block) return true;
-        return setblockWithoutError(pos, block, data);
+        return silentCommander.setblock(pos, block, data);
     });
 }
 

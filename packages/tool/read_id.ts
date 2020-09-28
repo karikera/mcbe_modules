@@ -1,6 +1,6 @@
-import { readJsonFiles } from "krfileutil";
+import { readJsonFiles } from "../krfileutil";
 import { extra_id } from "./extra_id";
-import Identifier from "@mcbe/identifier";
+import Identifier from "../@mcbe/identifier";
 import { bdspath } from "./bdspath";
 
 export function readIdFromBehaviorPack(packname:string):void

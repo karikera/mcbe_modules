@@ -3,7 +3,7 @@ import { readIdAndRecipeFromBehaviorPack } from "./read_recipe";
 
 import fs = require('fs');
 import { recipes_data } from "./extra_recipe";
-import Identifier from "@mcbe/identifier";
+import Identifier from "../@mcbe/identifier";
 
 export function generateId():void
 {

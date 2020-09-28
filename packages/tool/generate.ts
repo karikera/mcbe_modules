@@ -1,9 +1,9 @@
 
 require('source-map-support').install();
-import Identifier from "@mcbe/identifier";
+import Identifier from "../@mcbe/identifier";
 import { readSchema } from "./read_schema";
 import { generateId } from "./gen_id";
-import { lang2ts } from "mcaddon-lang2ts";
+import { lang2ts } from "../mcaddon-lang2ts";
 import { bdspath } from "./bdspath";
 
 switch (process.argv[2])

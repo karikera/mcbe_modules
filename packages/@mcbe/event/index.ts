@@ -4,9 +4,9 @@ import Event from "krevent";
 
 const system = getSystem();
 
-type BroadcastMapped<T extends {[key:string]:{value:any}}> = {[key in keyof T]:(value:T[key]['value'])=>boolean|null};
+export type BroadcastMapped<T extends Record<string, any>> = {[key in keyof T]:(value:T[key])=>boolean|null};
 type EventList = {[key:string]:{key:string, value:any}};
-type ListenerMapped<T extends EventList> = {[key in keyof T]:(cb:(ev:IEventData<T[key]['value']>['data'])=>void)=>void};
+type ListenerMappedBase<T extends EventList> = {[key in keyof T]:(cb:(ev:IEventData<T[key]['value']>['data'])=>void)=>void};
 interface EventObject<T extends EventList, KEY extends keyof T>
 {
     type:T[KEY]['key'];
@@ -17,13 +17,8 @@ export interface AllListener<T extends EventList>
 {
     all<KEY extends keyof T>(cb:(ev:EventObject<T, KEY>)=>void):void
 }
-export type ListenerList<T extends EventList> = ListenerMapped<T> & AllListener<T>;
+export type ListenerMapped<T extends EventList> = ListenerMappedBase<T> & AllListener<T>;
 
-
-export function evitem<T, KEY extends string=string>(key:KEY)
-{
-    return {key, value:null as any as T};
-}
 
 export function createBroadcast<T extends EventList>(map:T):BroadcastMapped<T>
 {
@@ -41,9 +36,9 @@ export function createBroadcast<T extends EventList>(map:T):BroadcastMapped<T>
     return mapped;
 }
 
-export function createListener<T extends EventList>(map:T):ListenerList<T>
+export function createListener<T extends EventList>(map:T):ListenerMapped<T>
 {
-    const mapped:ListenerMapped<T> = {} as any;
+    const mapped:ListenerMappedBase<T> = {} as any;
     for (const key in map)
     {
         const mckey = map[key].key;
@@ -66,7 +61,7 @@ export function createListener<T extends EventList>(map:T):ListenerList<T>
     {
         alls.push(map[key].key);
     }
-    const mapped_ex:ListenerList<T> = mapped as any;
+    const mapped_ex:ListenerMapped<T> = mapped as any;
     mapped_ex.all = function<KEY extends keyof T>(cb:(ev:EventObject<T, KEY>)=>void){
         for (const type of alls)
         {

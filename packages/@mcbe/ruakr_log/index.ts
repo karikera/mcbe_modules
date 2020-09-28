@@ -2,7 +2,6 @@
 import "@mcbe/dummy-console";
 import { IVector3 } from "krgeometry";
 import Identifier from "@mcbe/identifier";
-import { ItemStack } from "@mcbe/item";
 import Event from 'krevent';
 
 
@@ -14,6 +13,12 @@ console.log = function(msg:any, ...params:any[]){
 console.error = function(msg:any, ...params:any[]){
     console_error.apply(console, arguments);
 };
+
+interface ItemStack
+{
+    count:number;
+    id:Identifier;
+}
 
 namespace LOG {
 

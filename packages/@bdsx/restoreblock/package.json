@@ -11,7 +11,6 @@
       "url": "https://github.com/karikera/mcbe_modules"
     },
     "dependencies": {
-      "@mcbe/identifier": "^1.0.0",
       "@mcbe/command": "^1.0.0",
       "@mcbe/nexttick": "^1.0.0",
       "@mcbe/entity": "^1.0.0",
@@ -20,6 +19,7 @@
       "krgeometry": "^1.0.0"
     },
     "peerDependencies": {
+      "@mcbe/identifier": "^1.0.0",
       "bdsx": "1.x"
     }
 }

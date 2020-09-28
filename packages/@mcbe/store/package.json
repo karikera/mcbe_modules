@@ -20,6 +20,9 @@
       "@mcbe/scoreboard": "^1.0.0",
       "@mcbe/command": "^1.0.0",
       "@mcbe/event_server": "^1.0.0"
+    },
+    "peerDependencies": {
+      "@mcbe/identifier": "^1.0.0"
     }
   }
   

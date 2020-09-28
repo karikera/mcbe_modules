@@ -12,9 +12,6 @@ import { DimensionId } from 'bdsx/common';
 import events from '@mcbe/event_server';
 import { component } from '@mcbe/component';
 import { Entity } from '@mcbe/entity';
-import { chat } from 'bdsx';
-import { Damper } from '@mcbe/damper';
-import { LoginInfo } from '@bdsx/logininfo';
 
 export class LogExtra implements UserExtra
 {

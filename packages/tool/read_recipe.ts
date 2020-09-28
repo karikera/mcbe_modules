@@ -1,8 +1,8 @@
-import { Recipe } from "@mcbe/recipe";
-import { ItemStack } from "@mcbe/item";
-import { readJsonFiles } from "krfileutil";
+import { Recipe } from "../@mcbe/recipe";
+import { ItemStack } from "../@mcbe/item";
+import { readJsonFiles } from "../krfileutil";
+import Identifier from "../@mcbe/identifier";
 import { putRecipe } from "./extra_recipe";
-import Identifier from "@mcbe/identifier";
 import { bdspath } from "./bdspath";
 
 function isMiniPattern(pattern:string[]):boolean

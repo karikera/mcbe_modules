@@ -1,3 +1,4 @@
+/// <reference types="minecraft-scripting-types-server" /> 
 
 (global as any).server = {
     log(message:string){ console.log(message); },
@@ -57,7 +58,7 @@
                         callback({
                             command,
                             data:{
-                                statusMessage:lang_data.commands.generic_syntax.replace(/%([0-9]$)?s/g, (str,v)=>{
+                                statusMessage:lang_data.commands.generic_syntax.replace(/%([0-9]$)?s/g, (str, v)=>{
                                     if (v)
                                     {
                                         return params[parseInt(v.substr(0, v.length - 1))];
@@ -110,19 +111,18 @@
     },
 };
 
-import "@mcbe/system_server";
+import "../@mcbe/system_server";
 
-import { Lang, itemLang } from "@mcbe/lang";
-import lang_data = require("@mcbe/lang/data/en_US");
-import ID from "@mcbe/identifier/id";
-import MAKEID from "@mcbe/identifier/make";
-import { pickOutOrCraft } from "@mcbe/recipe/make";
-import { ItemList } from "@mcbe/item";
-import { recipes } from "@mcbe/recipe/list";
+import { Lang, itemLang } from "../@mcbe/lang";
+import lang_data = require("../@mcbe/lang/data/en_US");
+import ID from "../@mcbe/identifier/id";
+import MAKEID from "../@mcbe/identifier/make";
+import { pickOutOrCraft } from "../@mcbe/recipe/make";
+import { ItemList } from "../@mcbe/item";
+import { recipes } from "../@mcbe/recipe/list";
 
 
-export async function test():Promise<void>
-{
+(async()=>{
     console.assert(ID.poisonous_potato == MAKEID.poisonous_potato);
     
     Lang.load(require('@mcbe/lang/data/ko_KR'));
@@ -178,4 +178,4 @@ export async function test():Promise<void>
             }
         }
     }
-}
+})();

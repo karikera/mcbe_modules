@@ -1,12 +1,8 @@
 import '@mcbe/dummy-console';
 import { getSystem } from "@mcbe/system_shared";
+import { CompMap } from './typemap';
 
 const system = getSystem();
-
-function exact<T extends string>(value:T):T
-{
-    return value;
-}
 
 export class NoComponentError extends Error
 {
@@ -15,34 +11,6 @@ export class NoComponentError extends Error
         super('Component not found');
     }
 }
-
-const compMap = {
-    ArmorContainer: {key: exact(MinecraftComponent.ArmorContainer), value: <IArmorContainerComponent><any>null},
-    Attack: {key: exact(MinecraftComponent.Attack), value: <IAttackComponent><any>null},
-    CollisionBox: {key: exact(MinecraftComponent.CollisionBox), value: <ICollisionBoxComponent><any>null},
-    DamageSensor: {key: exact(MinecraftComponent.DamageSensor), value: <IDamageSensorComponent><any>null},
-    Equipment: {key: exact(MinecraftComponent.Equipment), value: <IEquipmentComponent><any>null},
-    Equippable: {key: exact(MinecraftComponent.Equippable), value: <IEquippableComponent><any>null},
-    Explode: {key: exact(MinecraftComponent.Explode), value: <IExplodeComponent><any>null},
-    HandContainer: {key: exact(MinecraftComponent.HandContainer), value: <IHandContainerComponent><any>null},
-    Healable: {key: exact(MinecraftComponent.Healable), value: <IHealableComponent><any>null},
-    Health: {key: exact(MinecraftComponent.Health), value: <IHealthComponent><any>null},
-    HotbarContainer: {key: exact(MinecraftComponent.HotbarContainer), value: <IHotbarContainerComponent><any>null},
-    Interact: {key: exact(MinecraftComponent.Interact), value: <IInteractComponent><any>null},
-    Inventory: {key: exact(MinecraftComponent.Inventory), value: <IInventoryComponent><any>null},
-    InventoryContainer: {key: exact(MinecraftComponent.InventoryContainer), value: <IInventoryContainerComponent><any>null},
-    LookAt: {key: exact(MinecraftComponent.LookAt), value: <ILookAtComponent><any>null},
-    Nameable: {key: exact(MinecraftComponent.Nameable), value: <INameableComponent><any>null},
-    Position: {key: exact(MinecraftComponent.Position), value: <IPositionComponent><any>null},
-    Rotation: {key: exact(MinecraftComponent.Rotation), value: <IRotationComponent><any>null},
-    Shooter: {key: exact(MinecraftComponent.Shooter), value: <IShooterComponent><any>null},
-    SpawnEntity: {key: exact(MinecraftComponent.SpawnEntity), value: <ISpawnEntityComponent><any>null},
-    Teleport: {key: exact(MinecraftComponent.Teleport), value: <ITeleportComponent><any>null},
-    TickWorld: {key: exact(MinecraftComponent.TickWorld), value: <ITickWorldComponent><any>null},
-    MoLang: {key: exact(MinecraftComponent.MoLang), value: <IMoLangComponent><any>null},
-};
-
-type CompMap = {[key in keyof typeof compMap]:key extends string ? (typeof compMap)[key] : never};
 
 export type ComponentAccessor = {
     [key in keyof CompMap]:IComponent<CompMap[key]['value']>
@@ -54,7 +22,7 @@ class Component<T extends keyof CompMap>
 
     constructor(public readonly name:T)
     {
-        this.key = compMap[name].key;
+        this.key = CompMap[name].key;
     }
 
     /**
@@ -104,9 +72,9 @@ class Component<T extends keyof CompMap>
 }
 
 export const component:{[key in keyof CompMap]:Component<key>} = {} as any;
-for (const name in compMap)
+for (const name in CompMap)
 {
-    component[name as keyof CompMap] = new Component(name as any);
+    component[name as keyof CompMap] = new Component(name as any) as any;
 }
 
 export function ComponentAccessor(entity:IEntity):ComponentAccessor

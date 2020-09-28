@@ -1,6 +1,6 @@
 
 import fs = require('fs');
-import { wget, firstLine } from 'krfileutil';
+import { wget, firstLine } from '../krfileutil';
 import { Elements } from './elements';
 import { webNameToId } from './webname';
 

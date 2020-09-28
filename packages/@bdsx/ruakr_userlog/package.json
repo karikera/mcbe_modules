@@ -13,14 +13,18 @@
     "dependencies": {
       "@mcbe/ruakr_const": "^1.0.0",
       "@mcbe/ruakr_log": "^1.0.0",
-      "@mcbe/identifier": "^1.0.0",
       "@mcbe/ruakr_itemgroup": "^1.0.0",
       "@bdsx/ruakr_user": "^1.0.0",
       "@bdsx/block": "^1.0.0",
       "@bdsx/position": "^1.0.0",
-      "@bdsx/logininfo": "^1.0.0"
+      "@bdsx/logininfo": "^1.0.0",
+      "@mcbe/identifier": "^1.0.0",
+      "@mcbe/event_server": "^1.0.0",
+      "@mcbe/component": "^1.0.0",
+      "@mcbe/entity": "^1.0.0"
     },
     "peerDependencies": {
+      "@mcbe/identifier": "^1.0.0",
       "bdsx": "1.x"
     }
 }

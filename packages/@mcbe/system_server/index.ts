@@ -1,4 +1,3 @@
-/// <reference types="minecraft-scripting-types-server" />
 import { createServerSystem } from "@mcbe/system_shared";
 import Identifier from "@mcbe/identifier";
 

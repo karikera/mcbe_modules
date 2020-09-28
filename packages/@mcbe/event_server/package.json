@@ -15,7 +15,8 @@
     },
     "dependencies": {
       "@mcbe/event": "^1.0.0",
-      "@mcbe/system_server": "^1.0.0"
+      "@mcbe/system_server": "^1.0.0",
+      "krevent": "^1.0.0"
     }
   }
   

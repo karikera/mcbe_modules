@@ -10,7 +10,7 @@
       "type": "git",
       "url": "https://github.com/karikera/mcbe_modules"
     },
-    "dependencies": {
-        "bdsx": "^1.0.0"
+    "peerDependencies": {
+        "bdsx": "1.x.x"
     }
 }

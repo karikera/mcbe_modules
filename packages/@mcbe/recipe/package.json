@@ -14,7 +14,9 @@
       "url": "https://github.com/karikera/mcbe_modules"
     },
     "dependencies": {
-      "@mcbe/item": "^1.0.0",
+      "@mcbe/item": "^1.0.0"
+    },
+    "peerDependencies": {
       "@mcbe/identifier": "^1.0.0"
     }
   }
