@@ -1,7 +1,7 @@
-import { Recipe } from "../@mcbe/recipe";
-import { ItemStack } from "../@mcbe/item";
+import { Recipe } from "@mcbe/recipe";
+import { ItemStack } from "@mcbe/item";
 import { readJsonFiles } from "../krfileutil";
-import Identifier from "../@mcbe/identifier";
+import Identifier from "@mcbe/identifier";
 import { putRecipe } from "./extra_recipe";
 import { bdspath } from "./bdspath";
 

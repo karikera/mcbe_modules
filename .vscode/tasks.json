@@ -4,9 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Lerna Bootstrap",
+            "label": "Lerna Link",
             "type": "shell",
-            "command": "lerna bootstrap",
+            "command": "lerna link",
             "problemMatcher": [],
             "group": "build"
         },

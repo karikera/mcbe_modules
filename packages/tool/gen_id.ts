@@ -3,7 +3,7 @@ import { readIdAndRecipeFromBehaviorPack } from "./read_recipe";
 
 import fs = require('fs');
 import { recipes_data } from "./extra_recipe";
-import Identifier from "../@mcbe/identifier";
+import Identifier from "@mcbe/identifier";
 
 export function generateId():void
 {
@@ -16,9 +16,9 @@ export function generateId():void
     readIdFromBehaviorPack('chemistry');
     readIdAndRecipeFromBehaviorPack('vanilla');
     readIdAndRecipeFromBehaviorPack('chemistry');
-    
+        
     // recipe
-    out = fs.createWriteStream('node_modules/@mcbe/recipe/list.ts', 'utf-8');
+    out = fs.createWriteStream('packages/@mcbe/recipe/list.ts', 'utf-8');
     out.write(`
 import { Recipe } from ".";
 import ID from "@mcbe/identifier/id";
@@ -28,7 +28,7 @@ export const recipes = new Map([`);
     {
         if (!id) continue;
         out.write('\n    [ID.');
-        out.write(id.mini);
+        out.write(id.name);
         out.write(',[\n        ');
         recipe.sort((a,b)=>a.complexCompare(b));
         out.write(recipe.map(r=>r.toSource()).join(',\n        '));
@@ -39,7 +39,7 @@ export const recipes = new Map([`);
     console.log(`${recipes_data.size} Recipes generateds.`);
 
     // ID
-    out = fs.createWriteStream('node_modules/@mcbe/identifier/id.ts', 'utf-8');
+    out = fs.createWriteStream('packages/@mcbe/identifier/id.ts', 'utf-8');
     out.write(`
 import MAKEID from "./make";
 

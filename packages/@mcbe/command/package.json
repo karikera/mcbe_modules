@@ -1,26 +1,28 @@
 {
-    "name": "@mcbe/command",
-    "version": "1.1.6",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
-    "license": "ISC",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/karikera/mcbe_modules"
-    },
-    "dependencies": {
-      "@mcbe/system_server": "^1.0.0",
-      "@mcbe/lang": "^1.0.0",
-      "@mcbe/version": "^1.0.0",
-      "@mcbe/ruakr_const": "^1.0.0"
-    },
-    "peerDependencies": {
+  "name": "@mcbe/command",
+  "version": "1.1.6",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karikera/mcbe_modules"
+  },
+  "dependencies": {
+    "@mcbe/system_server": "^1.0.0",
+    "@mcbe/lang": "^1.0.0",
+    "@mcbe/version": "^1.0.0",
+    "@mcbe/ruakr_const": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@mcbe/identifier": "^1.x"
+  },
+  "devDependencies": {
       "@mcbe/identifier": "^1.0.0"
-    }
   }
-  
+}

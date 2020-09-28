@@ -1,20 +1,19 @@
 {
-    "name": "mcaddon-lang2ts",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/karikera/mcbe_modules"
-    },
-    "keywords": [],
-    "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
-    "license": "ISC",
-    "dependencies": {
-      "krfileutil":"^1.0.0"
-    }
+  "name": "mcaddon-lang2ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karikera/mcbe_modules"
+  },
+  "keywords": [],
+  "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
+  "license": "ISC",
+  "dependencies": {
+    "krfileutil": "^1.0.0"
   }
-  
+}

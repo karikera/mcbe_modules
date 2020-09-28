@@ -1,20 +1,22 @@
 {
-    "name": "@mcbe/ruakr_itemgroup",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
-    "license": "ISC",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/karikera/mcbe_modules"
-    },
-    "peerDependencies": {
-      "@mcbe/identifier": "^1.0.0"
-    }
+  "name": "@mcbe/ruakr_itemgroup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karikera/mcbe_modules"
+  },
+  "peerDependencies": {
+    "@mcbe/identifier": "1.x"
+  },
+  "devDependencies": {
+    "@mcbe/identifier": "^1.0.0"
   }
-  
+}

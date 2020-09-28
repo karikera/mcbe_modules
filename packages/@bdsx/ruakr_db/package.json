@@ -7,10 +7,13 @@
     "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
     "license": "ISC",
     "repository": {
-      "type": "git",
-      "url": "https://github.com/karikera/mcbe_modules"
+        "type": "git",
+        "url": "https://github.com/karikera/mcbe_modules"
     },
     "peerDependencies": {
-        "bdsx": "1.x.x"
+        "bdsx": "1.x"
+    },
+    "devDependencies": {
+        "bdsx": "^1.0.0"
     }
 }

@@ -1,25 +1,29 @@
 {
-    "name": "@bdsx/restoreblock",
-    "version": "1.0.2",
-    "description": "restore block on destroy event(unbreakable-like)",
-    "main": "index.js",
-    "keywords": [],
-    "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
-    "license": "ISC",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/karikera/mcbe_modules"
-    },
-    "dependencies": {
-      "@mcbe/command": "^1.0.0",
-      "@mcbe/nexttick": "^1.0.0",
-      "@mcbe/entity": "^1.0.0",
-      "@mcbe/ruakr_itemgroup": "^1.0.0",
-      "@bdsx/block": "^1.0.0",
-      "krgeometry": "^1.0.0"
-    },
-    "peerDependencies": {
+  "name": "@bdsx/restoreblock",
+  "version": "1.0.2",
+  "description": "restore block on destroy event(unbreakable-like)",
+  "main": "index.js",
+  "keywords": [],
+  "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karikera/mcbe_modules"
+  },
+  "dependencies": {
+    "@mcbe/command": "^1.0.0",
+    "@mcbe/nexttick": "^1.0.0",
+    "@mcbe/entity": "^1.0.0",
+    "@mcbe/ruakr_itemgroup": "^1.0.0",
+    "@bdsx/block": "^1.0.0",
+    "krgeometry": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@mcbe/identifier": "^1.x",
+    "bdsx": "1.x"
+  },
+  "devDependencies": {
       "@mcbe/identifier": "^1.0.0",
-      "bdsx": "1.x"
-    }
+      "bdsx": "^1.0.0"
+  }
 }

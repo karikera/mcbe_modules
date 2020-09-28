@@ -1,23 +1,25 @@
 {
-    "name": "@mcbe/ruakr_log",
-    "version": "1.0.2",
-    "description": "log writer",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
-    "license": "ISC",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/karikera/mcbe_modules"
-    },
-    "dependencies": {
-      "krgeometry": "^1.0.0"
-    },
-    "peerDependencies": {
-      "@mcbe/identifier": "^1.0.0"
-    }
+  "name": "@mcbe/ruakr_log",
+  "version": "1.0.2",
+  "description": "log writer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karikera/mcbe_modules"
+  },
+  "dependencies": {
+    "krgeometry": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@mcbe/identifier": "1.x"
+  },
+  "devDependencies": {
+    "@mcbe/identifier": "^1.0.0"
   }
-  
+}

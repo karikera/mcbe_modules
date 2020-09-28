@@ -1,22 +1,21 @@
 {
-    "name": "@mcbe/console",
-    "version": "1.0.5",
-    "description": "console.log / console.error to chat message",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
-    "license": "ISC",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/karikera/mcbe_modules"
-    },
-    "dependencies": {
-      "@mcbe/system_server": "^1.0.0",
-      "krchecktimer": "^1.0.0",
-      "krlog": "^1.0.0"
-    }
+  "name": "@mcbe/console",
+  "version": "1.0.5",
+  "description": "console.log / console.error to chat message",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karikera/mcbe_modules"
+  },
+  "dependencies": {
+    "@mcbe/system_server": "^1.0.0",
+    "krchecktimer": "^1.0.0",
+    "krlog": "^1.0.0"
   }
-  
+}

@@ -7,8 +7,8 @@
     "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
     "license": "ISC",
     "repository": {
-      "type": "git",
-      "url": "https://github.com/karikera/mcbe_modules"
+        "type": "git",
+        "url": "https://github.com/karikera/mcbe_modules"
     },
     "dependencies": {
         "@mcbe/system_server": "^1.0.0",
@@ -23,7 +23,11 @@
         "@bdsx/restoreblock": "^1.0.0"
     },
     "peerDependencies": {
-      "@mcbe/identifier": "^1.0.0",
-      "bdsx": "1.x"
+        "@mcbe/identifier": "^1.x",
+        "bdsx": "1.x"
+    },
+    "devDependencies": {
+        "@mcbe/identifier": "^1.0.0",
+        "bdsx": "^1.0.0"
     }
 }

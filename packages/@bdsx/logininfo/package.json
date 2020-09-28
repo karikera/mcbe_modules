@@ -1,19 +1,22 @@
 {
-    "name": "@bdsx/logininfo",
-    "version": "1.0.1",
-    "description": "get ip from name or NetworkIdentifier",
-    "main": "index.js",
-    "keywords": [],
-    "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
-    "license": "ISC",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/karikera/mcbe_modules"
-    },
-    "dependencies": {
-      "krevent":"^1.0.0"
-    },
-    "peerDependencies": {
-      "bdsx": "1.x"
-    }
+  "name": "@bdsx/logininfo",
+  "version": "1.0.1",
+  "description": "get ip from name or NetworkIdentifier",
+  "main": "index.js",
+  "keywords": [],
+  "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karikera/mcbe_modules"
+  },
+  "dependencies": {
+    "krevent": "^1.0.0"
+  },
+  "peerDependencies": {
+    "bdsx": "1.x"
+  },
+  "devDependencies": {
+      "bdsx": "^1.0.0"
+  }
 }

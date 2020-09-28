@@ -1,22 +1,21 @@
 {
-    "name": "@mcbe/event_client",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
-    "license": "ISC",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/karikera/mcbe_modules"
-    },
-    "dependencies": {
-      "@mcbe/event": "^1.0.0",
-      "@mcbe/system_client": "^1.0.0",
-      "krevent": "^1.0.0"
-    }
+  "name": "@mcbe/event_client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karikera/mcbe_modules"
+  },
+  "dependencies": {
+    "@mcbe/event": "^1.0.0",
+    "@mcbe/system_client": "^1.0.0",
+    "krevent": "^1.0.0"
   }
-  
+}

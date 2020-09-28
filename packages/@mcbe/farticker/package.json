@@ -1,30 +1,32 @@
 {
-    "name": "@mcbe/farticker",
-    "version": "1.0.4",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
-    "license": "ISC",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/karikera/mcbe_modules"
-    },
-    "dependencies": {
-      "krchecktimer": "^1.0.0",
-      "krgeometry": "^1.0.0",
-      "@mcbe/system_server": "^1.0.0",
-      "@mcbe/timer": "^1.0.0",
-      "@mcbe/command": "^1.0.0",
-      "@mcbe/ruakr_const": "^1.0.0",
-      "@mcbe/event_server": "^1.0.0",
-      "@mcbe/lang": "^1.0.0"
-    },
-    "peerDependencies": {
+  "name": "@mcbe/farticker",
+  "version": "1.0.4",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karikera/mcbe_modules"
+  },
+  "dependencies": {
+    "krchecktimer": "^1.0.0",
+    "krgeometry": "^1.0.0",
+    "@mcbe/system_server": "^1.0.0",
+    "@mcbe/timer": "^1.0.0",
+    "@mcbe/command": "^1.0.0",
+    "@mcbe/ruakr_const": "^1.0.0",
+    "@mcbe/event_server": "^1.0.0",
+    "@mcbe/lang": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@mcbe/identifier": "1.x"
+  },
+  "devDependencies": {
       "@mcbe/identifier": "^1.0.0"
-    }
   }
-  
+}

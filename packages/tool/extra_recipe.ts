@@ -389,7 +389,6 @@ export function putRecipe(recipe: Recipe): void
         recipes_data.set(output[0], [recipe]);
         return;
     }
-    if (output[0].name === 'prismarine' && recipe.inputs[0][1] === 9) debugger;
 
     for (let i = 0; i < recipes.length;) {
         const r = recipes[i];
