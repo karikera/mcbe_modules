@@ -417,6 +417,8 @@ export class User implements UserLike
         this.ip = loginInfo.ip;
         this.ni = loginInfo.ni as NetworkIdentifier;
 
+        if (this.actor === null) throw Error(`${this} Actor not found`);
+        
         this.extras = extras.map(ctor=>new ctor(this));
         extraEvents.onNew.fire(this);
         
