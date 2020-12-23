@@ -1,6 +1,6 @@
 {
     "name": "@bdsx/ruakr_user",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "log writer to db with ruakr_log",
     "main": "index.js",
     "keywords": [],
@@ -11,27 +11,27 @@
         "url": "https://github.com/karikera/mcbe_modules"
     },
     "dependencies": {
-        "@bdsx/block": "^2.0.1",
-        "@bdsx/logininfo": "^2.0.1",
-        "@bdsx/position": "^2.0.1",
-        "@mcbe/command": "^2.0.1",
-        "@mcbe/component": "^2.0.1",
-        "@mcbe/entity": "^2.0.1",
-        "@mcbe/event_server": "^2.0.1",
-        "@mcbe/item": "^2.0.1",
-        "@mcbe/nexttick": "^2.0.1",
-        "@mcbe/ruakr_const": "^2.0.1",
-        "@mcbe/ruakr_itemgroup": "^2.0.1",
-        "@mcbe/ruakr_util": "^2.0.1",
-        "@mcbe/store": "^2.0.1",
-        "@mcbe/system_server": "^2.0.1",
-        "krgeometry": "^2.0.1"
+        "@bdsx/block": "^2.0.2",
+        "@bdsx/logininfo": "^2.0.2",
+        "@bdsx/position": "^2.0.2",
+        "@mcbe/command": "^2.0.2",
+        "@mcbe/component": "^2.0.2",
+        "@mcbe/entity": "^2.0.2",
+        "@mcbe/event_server": "^2.0.2",
+        "@mcbe/item": "^2.0.2",
+        "@mcbe/nexttick": "^2.0.2",
+        "@mcbe/ruakr_const": "^2.0.2",
+        "@mcbe/ruakr_itemgroup": "^2.0.2",
+        "@mcbe/ruakr_util": "^2.0.2",
+        "@mcbe/store": "^2.0.2",
+        "@mcbe/system_server": "^2.0.2",
+        "krgeometry": "^2.0.2"
     },
     "peerDependencies": {
         "@mcbe/identifier": "^1.x",
         "bdsx": "1.x"
     },
     "devDependencies": {
-        "@mcbe/identifier": "^2.0.1"
+        "@mcbe/identifier": "^2.0.2"
     }
 }

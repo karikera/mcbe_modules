@@ -1,6 +1,6 @@
 {
   "name": "@mcbe/identifier",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,6 @@
     "url": "https://github.com/karikera/mcbe_modules"
   },
   "dependencies": {
-    "@mcbe/ruakr_const": "^2.0.1"
+    "@mcbe/ruakr_const": "^2.0.2"
   }
 }

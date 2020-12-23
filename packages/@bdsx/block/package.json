@@ -1,6 +1,6 @@
 {
     "name": "@bdsx/block",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "classified block",
     "main": "index.js",
     "keywords": [],
@@ -11,17 +11,17 @@
         "url": "https://github.com/karikera/mcbe_modules"
     },
     "dependencies": {
-        "@bdsx/position": "^2.0.1",
-        "@mcbe/command": "^2.0.1",
-        "@mcbe/ruakr_itemgroup": "^2.0.1",
-        "@mcbe/system_server": "^2.0.1",
-        "krgeometry": "^2.0.1"
+        "@bdsx/position": "^2.0.2",
+        "@mcbe/command": "^2.0.2",
+        "@mcbe/ruakr_itemgroup": "^2.0.2",
+        "@mcbe/system_server": "^2.0.2",
+        "krgeometry": "^2.0.2"
     },
     "peerDependencies": {
         "@mcbe/identifier": "1.x",
         "bdsx": "1.x"
     },
     "devDependencies": {
-        "@mcbe/identifier": "^2.0.1"
+        "@mcbe/identifier": "^2.0.2"
     }
 }
