@@ -1,6 +1,6 @@
 {
     "name": "@bdsx/position",
-    "version": "1.0.3",
+    "version": "2.0.1",
     "description": "Vector3 class with dimension",
     "main": "index.js",
     "keywords": [],
@@ -11,7 +11,7 @@
         "url": "https://github.com/karikera/mcbe_modules"
     },
     "dependencies": {
-        "krgeometry": "^1.0.0"
+        "krgeometry": "^2.0.1"
     },
     "peerDependencies": {
         "bdsx": "1.x"

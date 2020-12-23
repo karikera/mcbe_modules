@@ -1,6 +1,6 @@
 {
   "name": "@bdsx/logininfo-db",
-  "version": "1.0.2",
+  "version": "2.0.1",
   "description": "records all login-infos to DB",
   "main": "index.js",
   "keywords": [],
@@ -11,12 +11,12 @@
     "url": "https://github.com/karikera/mcbe_modules"
   },
   "dependencies": {
-    "@bdsx/logininfo": "^1.0.0"
+    "@bdsx/logininfo": "^2.0.1"
   },
   "peerDependencies": {
     "@bdsx/ruakr_db": "1.x"
   },
   "devDependencies": {
-    "@bdsx/ruakr_db": "1.x"
+    "@bdsx/ruakr_db": "^2.0.1"
   }
 }

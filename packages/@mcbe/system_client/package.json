@@ -1,6 +1,6 @@
 {
   "name": "@mcbe/system_client",
-  "version": "1.0.3",
+  "version": "2.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,6 @@
     "@mcbe/system_shared": "1.x"
   },
   "devDependencies": {
-    "@mcbe/system_shared": "^1.0.0"
-  },
-  "dependencies": {}
+    "@mcbe/system_shared": "^2.0.1"
+  }
 }

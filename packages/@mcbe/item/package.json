@@ -1,6 +1,6 @@
 {
   "name": "@mcbe/item",
-  "version": "1.0.4",
+  "version": "2.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,6 @@
     "@mcbe/identifier": "1.x"
   },
   "devDependencies": {
-    "@mcbe/identifier": "^1.0.0"
-  },
-  "dependencies": {}
+    "@mcbe/identifier": "^2.0.1"
+  }
 }

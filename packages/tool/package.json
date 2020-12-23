@@ -1,6 +1,6 @@
 {
   "name": "tool",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "main": "./test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@mcbe/item": "^1.0.4",
-    "@mcbe/recipe": "^1.1.8",
+    "@mcbe/item": "^2.0.1",
+    "@mcbe/recipe": "^2.0.1",
     "minecraft-scripting-types-client": "^1.0.0",
     "minecraft-scripting-types-server": "^1.0.0",
     "node-html-parser": "^1.4.9",
@@ -21,6 +21,6 @@
     "@mcbe/identifier": "^1.0.0"
   },
   "devDependencies": {
-    "@mcbe/identifier": "^1.0.12"
+    "@mcbe/identifier": "^2.0.1"
   }
 }

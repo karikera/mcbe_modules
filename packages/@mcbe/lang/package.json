@@ -1,6 +1,6 @@
 {
   "name": "@mcbe/lang",
-  "version": "1.0.11",
+  "version": "2.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,17 +14,17 @@
     "url": "https://github.com/karikera/mcbe_modules"
   },
   "dependencies": {
-    "@mcbe/ruakr_const": "^1.0.0",
-    "@mcbe/ruakr_util": "^1.0.0",
-    "@mcbe/system_server": "^1.0.0",
+    "@mcbe/ruakr_const": "^2.0.1",
+    "@mcbe/ruakr_util": "^2.0.1",
+    "@mcbe/system_server": "^2.0.1",
     "escape-string-regexp": "^2.0.0"
   },
   "peerDependencies": {
-    "@mcbe/system_shared": "1.x",
-    "@mcbe/identifier": "^1.x"
+    "@mcbe/identifier": "^1.x",
+    "@mcbe/system_shared": "1.x"
   },
   "devDependencies": {
-    "@mcbe/system_shared": "^1.0.0",
-    "@mcbe/identifier": "^1.0.0"
+    "@mcbe/identifier": "^2.0.1",
+    "@mcbe/system_shared": "^2.0.1"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "mcaddon-lang2ts",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,6 @@
   "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
   "license": "ISC",
   "dependencies": {
-    "krfileutil": "^1.0.0"
+    "krfileutil": "^2.0.1"
   }
 }
