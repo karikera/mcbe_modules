@@ -121,6 +121,7 @@ const tails = [
     '_blackstone',
     '_chestplate',
     '_on_a_stick',
+    '_spawn_egg',
 ];
 
 const middles = [

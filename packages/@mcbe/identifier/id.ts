@@ -91,6 +91,7 @@ const ID = {
     chainmail_chestplate: MAKEID.chainmail_chestplate,
     chainmail_helmet: MAKEID.chainmail_helmet,
     chainmail_leggings: MAKEID.chainmail_leggings,
+    charcoal: MAKEID.charcoal,
     chest: MAKEID.chest,
     chest_minecart: MAKEID.chest_minecart,
     chicken: MAKEID.chicken,

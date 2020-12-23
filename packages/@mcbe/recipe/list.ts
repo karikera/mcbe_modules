@@ -99,6 +99,14 @@ export const recipes = new Map([
     ]],
     [ID.campfire,[
         new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.coal, 1],[ID.log, 3],],[[ID.campfire, 1],]),
+        new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.log, 3],[ID.charcoal, 1],],[[ID.campfire, 1],]),
+        new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.log2, 3],[ID.charcoal, 1],],[[ID.campfire, 1],]),
+        new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.stripped_acacia_log, 3],[ID.charcoal, 1],],[[ID.campfire, 1],]),
+        new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.stripped_birch_log, 3],[ID.charcoal, 1],],[[ID.campfire, 1],]),
+        new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.stripped_dark_oak_log, 3],[ID.charcoal, 1],],[[ID.campfire, 1],]),
+        new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.stripped_jungle_log, 3],[ID.charcoal, 1],],[[ID.campfire, 1],]),
+        new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.stripped_oak_log, 3],[ID.charcoal, 1],],[[ID.campfire, 1],]),
+        new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.stripped_spruce_log, 3],[ID.charcoal, 1],],[[ID.campfire, 1],]),
         new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.log2, 3],[ID.coal, 1],],[[ID.campfire, 1],]),
         new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.stripped_acacia_log, 3],[ID.coal, 1],],[[ID.campfire, 1],]),
         new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.stripped_birch_log, 3],[ID.coal, 1],],[[ID.campfire, 1],]),
@@ -106,6 +114,7 @@ export const recipes = new Map([
         new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.stripped_jungle_log, 3],[ID.coal, 1],],[[ID.campfire, 1],]),
         new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.stripped_oak_log, 3],[ID.coal, 1],],[[ID.campfire, 1],]),
         new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.stripped_spruce_log, 3],[ID.coal, 1],],[[ID.campfire, 1],]),
+        new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.wood, 3],[ID.charcoal, 1],],[[ID.campfire, 1],]),
         new Recipe([ID.crafting_table],[[ID.stick, 3],[ID.wood, 3],[ID.coal, 1],],[[ID.campfire, 1],])
     ]],
     [ID.cake,[
