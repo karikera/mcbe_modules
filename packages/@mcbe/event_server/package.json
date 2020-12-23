@@ -1,6 +1,6 @@
 {
   "name": "@mcbe/event_server",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,8 +14,8 @@
     "url": "https://github.com/karikera/mcbe_modules"
   },
   "dependencies": {
-    "@mcbe/event": "^2.0.2",
-    "@mcbe/system_server": "^2.0.2",
+    "@mcbe/event": "^2.0.4",
+    "@mcbe/system_server": "^2.0.4",
     "krevent": "^1.0.0"
   }
 }

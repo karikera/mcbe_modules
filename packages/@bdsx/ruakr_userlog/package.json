@@ -1,6 +1,6 @@
 {
   "name": "@bdsx/ruakr_userlog",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "Write logs about user with ruakr_log",
   "main": "index.js",
   "keywords": [],
@@ -11,17 +11,17 @@
     "url": "https://github.com/karikera/mcbe_modules"
   },
   "dependencies": {
-    "@bdsx/block": "^2.0.2",
-    "@bdsx/logininfo": "^2.0.2",
-    "@bdsx/position": "^2.0.2",
-    "@bdsx/ruakr_user": "^2.0.2",
-    "@mcbe/component": "^2.0.2",
-    "@mcbe/entity": "^2.0.2",
-    "@mcbe/event_server": "^2.0.2",
-    "@mcbe/identifier": "^2.0.2",
-    "@mcbe/ruakr_const": "^2.0.2",
-    "@mcbe/ruakr_itemgroup": "^2.0.2",
-    "@mcbe/ruakr_log": "^2.0.2"
+    "@bdsx/block": "^2.0.4",
+    "@bdsx/logininfo": "^2.0.4",
+    "@bdsx/position": "^2.0.4",
+    "@bdsx/ruakr_user": "^2.0.4",
+    "@mcbe/component": "^2.0.4",
+    "@mcbe/entity": "^2.0.4",
+    "@mcbe/event_server": "^2.0.4",
+    "@mcbe/identifier": "^2.0.4",
+    "@mcbe/ruakr_const": "^2.0.4",
+    "@mcbe/ruakr_itemgroup": "^2.0.4",
+    "@mcbe/ruakr_log": "^2.0.4"
   },
   "peerDependencies": {
     "@mcbe/identifier": "^1.x",

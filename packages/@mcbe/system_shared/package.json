@@ -1,6 +1,6 @@
 {
   "name": "@mcbe/system_shared",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
   "license": "ISC",
   "dependencies": {
-    "@mcbe/dummy-console": "^2.0.2",
+    "@mcbe/dummy-console": "^2.0.4",
     "minecraft-scripting-types-client": "^1.0.0",
     "minecraft-scripting-types-server": "^1.0.0"
   }

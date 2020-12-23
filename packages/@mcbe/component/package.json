@@ -1,6 +1,6 @@
 {
   "name": "@mcbe/component",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,12 +14,12 @@
     "url": "https://github.com/karikera/mcbe_modules"
   },
   "dependencies": {
-    "@mcbe/dummy-console": "^2.0.2"
+    "@mcbe/dummy-console": "^2.0.4"
   },
   "peerDependencies": {
     "@mcbe/system_shared": "1.x"
   },
   "devDependencies": {
-    "@mcbe/system_shared": "^2.0.2"
+    "@mcbe/system_shared": "^2.0.4"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@mcbe/timer",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,9 @@
   "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
   "license": "ISC",
   "dependencies": {
-    "@mcbe/dummy-console": "^2.0.2",
-    "@mcbe/event": "^2.0.2",
-    "@mcbe/nexttick": "^2.0.2",
-    "krchecktimer": "^2.0.2"
+    "@mcbe/dummy-console": "^2.0.4",
+    "@mcbe/event": "^2.0.4",
+    "@mcbe/nexttick": "^2.0.4",
+    "krchecktimer": "^2.0.4"
   }
 }

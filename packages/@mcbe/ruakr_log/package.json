@@ -1,6 +1,6 @@
 {
   "name": "@mcbe/ruakr_log",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "log writer",
   "main": "index.js",
   "scripts": {
@@ -14,12 +14,12 @@
     "url": "https://github.com/karikera/mcbe_modules"
   },
   "dependencies": {
-    "krgeometry": "^2.0.2"
+    "krgeometry": "^2.0.4"
   },
   "peerDependencies": {
     "@mcbe/identifier": "1.x"
   },
   "devDependencies": {
-    "@mcbe/identifier": "^2.0.2"
+    "@mcbe/identifier": "^2.0.4"
   }
 }

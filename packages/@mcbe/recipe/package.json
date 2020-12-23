@@ -1,6 +1,6 @@
 {
   "name": "@mcbe/recipe",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,12 +14,12 @@
     "url": "https://github.com/karikera/mcbe_modules"
   },
   "dependencies": {
-    "@mcbe/item": "^2.0.2"
+    "@mcbe/item": "^2.0.4"
   },
   "peerDependencies": {
     "@mcbe/identifier": "1.x"
   },
   "devDependencies": {
-    "@mcbe/identifier": "^2.0.2"
+    "@mcbe/identifier": "^2.0.4"
   }
 }

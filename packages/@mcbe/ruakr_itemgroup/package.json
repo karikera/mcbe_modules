@@ -1,6 +1,6 @@
 {
   "name": "@mcbe/ruakr_itemgroup",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,6 @@
     "@mcbe/identifier": "1.x"
   },
   "devDependencies": {
-    "@mcbe/identifier": "^2.0.2"
+    "@mcbe/identifier": "^2.0.4"
   }
 }
