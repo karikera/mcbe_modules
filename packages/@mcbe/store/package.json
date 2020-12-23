@@ -1,6 +1,6 @@
 {
   "name": "@mcbe/store",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,10 +14,10 @@
     "url": "https://github.com/karikera/mcbe_modules"
   },
   "dependencies": {
-    "@mcbe/command": "^2.0.4",
+    "@mcbe/command": "^2.0.5",
     "@mcbe/dummy-console": "^2.0.4",
-    "@mcbe/event_server": "^2.0.4",
-    "@mcbe/scoreboard": "^2.0.4",
+    "@mcbe/event_server": "^2.0.5",
+    "@mcbe/scoreboard": "^2.0.5",
     "@mcbe/timer": "^2.0.4",
     "krchecktimer": "^2.0.4"
   },
@@ -25,6 +25,6 @@
     "@mcbe/identifier": "1.x"
   },
   "devDependencies": {
-    "@mcbe/identifier": "^2.0.4"
+    "@mcbe/identifier": "^2.0.5"
   }
 }

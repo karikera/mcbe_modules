@@ -1,6 +1,6 @@
 {
   "name": "@bdsx/restoreblock",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "restore block on destroy event(unbreakable-like)",
   "main": "index.js",
   "keywords": [],
@@ -11,11 +11,11 @@
     "url": "https://github.com/karikera/mcbe_modules"
   },
   "dependencies": {
-    "@bdsx/block": "^2.0.4",
-    "@mcbe/command": "^2.0.4",
-    "@mcbe/entity": "^2.0.4",
+    "@bdsx/block": "^2.0.5",
+    "@mcbe/command": "^2.0.5",
+    "@mcbe/entity": "^2.0.5",
     "@mcbe/nexttick": "^2.0.4",
-    "@mcbe/ruakr_itemgroup": "^2.0.4",
+    "@mcbe/ruakr_itemgroup": "^2.0.5",
     "krgeometry": "^2.0.4"
   },
   "peerDependencies": {
@@ -23,6 +23,6 @@
     "bdsx": "1.x"
   },
   "devDependencies": {
-    "@mcbe/identifier": "^2.0.4"
+    "@mcbe/identifier": "^2.0.5"
   }
 }
