@@ -10,9 +10,9 @@
   "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
   "license": "ISC",
   "dependencies": {
-    "krchecktimer": "^1.0.0",
     "@mcbe/dummy-console": "^1.0.0",
     "@mcbe/event": "^1.0.0",
-    "@mcbe/nexttick": "^1.0.0"
+    "@mcbe/nexttick": "^1.0.0",
+    "krchecktimer": "^1.0.0"
   }
 }

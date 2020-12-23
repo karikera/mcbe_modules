@@ -22,7 +22,6 @@
         "bdsx": "1.x"
     },
     "devDependencies": {
-        "@mcbe/identifier": "^1.0.0",
-        "bdsx": "^1.0.0"
+        "@mcbe/identifier": "^1.x"
     }
 }

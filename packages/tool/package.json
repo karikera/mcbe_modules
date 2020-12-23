@@ -10,18 +10,17 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@mcbe/recipe": "^1.0.0",
-    "@mcbe/item": "^1.0.0",
-    "@types/node": "^14.11.2",
+    "@mcbe/item": "^1.0.4",
+    "@mcbe/recipe": "^1.1.8",
     "minecraft-scripting-types-client": "^1.0.0",
     "minecraft-scripting-types-server": "^1.0.0",
-    "node-html-parser": "^1.2.21",
+    "node-html-parser": "^1.4.9",
     "source-map-support": "^0.5.19"
   },
   "peerDependencies": {
     "@mcbe/identifier": "^1.0.0"
   },
   "devDependencies": {
-    "@mcbe/identifier": "^1.0.0"
+    "@mcbe/identifier": "^1.0.12"
   }
 }

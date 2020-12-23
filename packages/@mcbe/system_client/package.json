@@ -18,5 +18,6 @@
   },
   "devDependencies": {
     "@mcbe/system_shared": "^1.0.0"
-  }
+  },
+  "dependencies": {}
 }

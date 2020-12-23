@@ -23,7 +23,6 @@ If you put it to one of both, It will automatically add to other one when launch
 And It will add to `package.json` and `tsconfig.json` automatically  
 
 ## File explanations
-* publish_result.json: Published versions by `Publish`, It will used to check latest version
 * node_modules/@mcbe/*: packages
 * resource_packs/vanila: vanila resource_pack, It will parsed by `Test`
 * behavior_packs/vanila: vanila behavior_pack, It will parsed by `Test`

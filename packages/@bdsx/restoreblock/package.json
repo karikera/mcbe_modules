@@ -11,11 +11,11 @@
     "url": "https://github.com/karikera/mcbe_modules"
   },
   "dependencies": {
-    "@mcbe/command": "^1.0.0",
-    "@mcbe/nexttick": "^1.0.0",
-    "@mcbe/entity": "^1.0.0",
-    "@mcbe/ruakr_itemgroup": "^1.0.0",
     "@bdsx/block": "^1.0.0",
+    "@mcbe/command": "^1.0.0",
+    "@mcbe/entity": "^1.0.0",
+    "@mcbe/nexttick": "^1.0.0",
+    "@mcbe/ruakr_itemgroup": "^1.0.0",
     "krgeometry": "^1.0.0"
   },
   "peerDependencies": {
@@ -23,7 +23,6 @@
     "bdsx": "1.x"
   },
   "devDependencies": {
-      "@mcbe/identifier": "^1.0.0",
-      "bdsx": "^1.0.0"
+    "@mcbe/identifier": "^1.0.0"
   }
 }

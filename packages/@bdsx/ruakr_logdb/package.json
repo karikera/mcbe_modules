@@ -1,6 +1,6 @@
 {
     "name": "@bdsx/ruakr_logdb",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "log writer to db with ruakr_log",
     "main": "index.js",
     "keywords": [],
@@ -17,6 +17,6 @@
         "@bdsx/ruakr_db": "1.x"
     },
     "devDependencies": {
-        "@mcbe/ruakr_db": "^1.0.0"
+        "@bdsx/ruakr_db": "1.x"
     }
 }

@@ -14,12 +14,12 @@
     "url": "https://github.com/karikera/mcbe_modules"
   },
   "dependencies": {
-    "krchecktimer": "^1.0.0",
-    "@mcbe/dummy-console": "^1.0.0",
-    "@mcbe/timer": "^1.0.0",
-    "@mcbe/scoreboard": "^1.0.0",
     "@mcbe/command": "^1.0.0",
-    "@mcbe/event_server": "^1.0.0"
+    "@mcbe/dummy-console": "^1.0.0",
+    "@mcbe/event_server": "^1.0.0",
+    "@mcbe/scoreboard": "^1.0.0",
+    "@mcbe/timer": "^1.0.0",
+    "krchecktimer": "^1.0.0"
   },
   "peerDependencies": {
     "@mcbe/identifier": "1.x"

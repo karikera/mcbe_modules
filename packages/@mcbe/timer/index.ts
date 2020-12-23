@@ -34,8 +34,12 @@ class TimerLink
     }
 }
 
+let counter = 1000;
+
 export class Timeout extends TimerLink implements NodeJS.Timeout
 {
+    private readonly id = counter++;
+
     constructor(
         public time:number,
         private readonly fn:(...args:any[])=>void|Promise<any>, 
@@ -65,6 +69,7 @@ export class Timeout extends TimerLink implements NodeJS.Timeout
     ref(): this { throw Error('Not supported'); }
     refresh(): this { throw Error('Not supported'); }
     unref(): this { throw Error('Not supported'); }
+    [Symbol.toPrimitive](){ return this.id; }
 }
 
 declare var setTimeout:(fn:(...args:any[])=>void, wait:number, ...args:any[])=>Timeout;

@@ -408,7 +408,7 @@ export class User implements UserLike
         public readonly name:string, 
         loginInfo:LoginInfo)
     {
-        this.actor = Actor.fromEntity(this.entity);
+        this.actor = Actor.fromEntity(this.entity)!;
         this.component = ComponentAccessor(entity);
         this.isAdminAccount = User.admins.has(name);
         this.position = Position.make(this.component.Position.data, this.actor.getDimension());

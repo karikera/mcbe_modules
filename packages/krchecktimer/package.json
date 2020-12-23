@@ -12,5 +12,6 @@
   },
   "keywords": [],
   "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }

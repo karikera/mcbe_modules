@@ -12,5 +12,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/karikera/mcbe_modules"
-  }
+  },
+  "dependencies": {}
 }

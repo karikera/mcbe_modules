@@ -15,8 +15,5 @@
     },
     "peerDependencies": {
         "bdsx": "1.x"
-    },
-    "devDependencies": {
-        "bdsx": "^1.0.0"
     }
 }

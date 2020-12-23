@@ -19,7 +19,7 @@
         "@bdsx/ruakr_db": "file:packages/@bdsx/ruakr_db",
         "@mcbe/identifier": "file:packages/@mcbe/identifier",
         "@mcbe/system_shared": "file:packages/@mcbe/system_shared",
-        "bdsx": "^1.3.35",
+        "bdsx": "^1.3.53",
         "minecraft-scripting-types-client": "^1.0.0",
         "minecraft-scripting-types-server": "^1.0.0"
     },
