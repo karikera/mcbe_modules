@@ -80,6 +80,7 @@ const heads = [
     'chiseled_',
     'netherite_',
     'warped_',
+    'lodestone_'
 ];
 
 const tails = [

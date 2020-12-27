@@ -443,6 +443,7 @@ const ID = {
     lit_smoker: MAKEID.lit_smoker,
     llama: MAKEID.llama,
     lodestone: MAKEID.lodestone,
+    lodestone_compass: MAKEID.lodestone_compass,
     lodestonecompass: MAKEID.lodestonecompass,
     log: MAKEID.log,
     log2: MAKEID.log2,

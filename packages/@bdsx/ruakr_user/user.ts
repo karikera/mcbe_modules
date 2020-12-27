@@ -403,6 +403,8 @@ export class User implements UserLike
     private destructingPos = Position.NULL;
     private destructing = DestructingState.Ended;
 
+    public errorCounter = 0;
+
     constructor(
         public entity:IEntity, 
         public readonly name:string, 
@@ -417,7 +419,8 @@ export class User implements UserLike
         this.ip = loginInfo.ip;
         this.ni = loginInfo.ni as NetworkIdentifier;
 
-        if (this.actor === null) throw Error(`${this} Actor not found`);
+        if (this.actor === null) throw Error(`${this}: Actor not found`);
+        if (!this.actor.isPlayer()) throw Error(`${this}: Actor is not player`);
         
         this.extras = extras.map(ctor=>new ctor(this));
         extraEvents.onNew.fire(this);
@@ -569,6 +572,11 @@ export class User implements UserLike
 
     updateReal():void
     {
+        if (this.errorCounter !== 0)
+        {
+            this.errorCounter --;
+        }
+
         const poscomp = component.Position.getOrNull(this.entity);
         if (!poscomp)
         {
@@ -995,6 +1003,7 @@ export class User implements UserLike
                 if (err !== ThrowKickUser)
                 {
                     console.error(err);
+                    console.error( `${name}: failed to join by error`);
                 }
                 system.destroyEntity(entity);
                 return null;
@@ -1158,10 +1167,18 @@ events.update.on(()=>{
         }
         catch (err)
         {
-            console.error(err);
+            user.errorCounter += 2;
             if (err instanceof NoComponentError)
             {
                 user.dispose();
+            }
+            else
+            {
+                if (user.errorCounter >= 5)
+                {
+                    console.error(`${user}: kicked by too many errors`);
+                    user.kick();
+                }
             }
         }
     }
