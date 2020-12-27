@@ -1,6 +1,6 @@
 {
     "name": "@mcbe/entity",
-    "version": "2.0.5",
+    "version": "2.0.6",
     "description": "classified entity",
     "main": "index.js",
     "keywords": [],
@@ -12,9 +12,9 @@
     },
     "dependencies": {
         "@mcbe/component": "^2.0.4",
-        "@mcbe/event_server": "^2.0.5",
+        "@mcbe/event_server": "^2.0.6",
         "@mcbe/nexttick": "^2.0.4",
-        "@mcbe/system_server": "^2.0.5",
+        "@mcbe/system_server": "^2.0.6",
         "krarraymap": "^2.0.4",
         "krevent": "^1.0.0",
         "krgeometry": "^2.0.4"
@@ -23,6 +23,6 @@
         "@mcbe/identifier": "^1.x"
     },
     "devDependencies": {
-        "@mcbe/identifier": "^2.0.5"
+        "@mcbe/identifier": "^2.0.6"
     }
 }
