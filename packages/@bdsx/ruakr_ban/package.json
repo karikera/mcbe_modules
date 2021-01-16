@@ -1,6 +1,6 @@
 {
     "name": "@bdsx/ruakr_ban",
-    "version": "2.0.6",
+    "version": "2.0.7",
     "description": "ban_feature with ruakr_user",
     "main": "index.js",
     "keywords": [],
@@ -14,7 +14,7 @@
         "@bdsx/block": "^2.0.6",
         "@bdsx/logininfo-db": "^2.0.4",
         "@bdsx/restoreblock": "^2.0.6",
-        "@bdsx/ruakr_user": "^2.0.6",
+        "@bdsx/ruakr_user": "^2.0.7",
         "@mcbe/damper": "^2.0.4",
         "@mcbe/ruakr_itemgroup": "^2.0.6",
         "@mcbe/ruakr_log": "^2.0.6",
