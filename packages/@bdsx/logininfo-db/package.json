@@ -14,7 +14,7 @@
     "@bdsx/logininfo": "^2.0.4"
   },
   "peerDependencies": {
-    "@bdsx/ruakr_db": "1.x"
+    "@bdsx/ruakr_db": "2.x"
   },
   "devDependencies": {
     "@bdsx/ruakr_db": "^2.0.4"

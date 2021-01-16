@@ -23,7 +23,7 @@
         "krjsonwatcher": "^1.0.0"
     },
     "peerDependencies": {
-        "@mcbe/identifier": "^1.x",
+        "@mcbe/identifier": "^2.x",
         "bdsx": "1.x"
     },
     "devDependencies": {

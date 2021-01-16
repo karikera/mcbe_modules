@@ -20,7 +20,7 @@
         "krgeometry": "^2.0.4"
     },
     "peerDependencies": {
-        "@mcbe/identifier": "^1.x"
+        "@mcbe/identifier": "^2.x"
     },
     "devDependencies": {
         "@mcbe/identifier": "^2.0.6"

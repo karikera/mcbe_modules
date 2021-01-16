@@ -17,7 +17,7 @@
     "@mcbe/dummy-console": "^2.0.4"
   },
   "peerDependencies": {
-    "@mcbe/system_shared": "1.x"
+    "@mcbe/system_shared": "2.x"
   },
   "devDependencies": {
     "@mcbe/system_shared": "^2.0.4"
