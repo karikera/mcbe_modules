@@ -1,6 +1,6 @@
 {
   "name": "@bdsx/logininfo-db",
-  "version": "2.0.4",
+  "version": "2.0.8",
   "description": "records all login-infos to DB",
   "main": "index.js",
   "keywords": [],

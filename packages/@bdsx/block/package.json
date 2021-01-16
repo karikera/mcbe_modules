@@ -1,6 +1,6 @@
 {
     "name": "@bdsx/block",
-    "version": "2.0.6",
+    "version": "2.0.8",
     "description": "classified block",
     "main": "index.js",
     "keywords": [],
@@ -12,9 +12,9 @@
     },
     "dependencies": {
         "@bdsx/position": "^2.0.4",
-        "@mcbe/command": "^2.0.6",
-        "@mcbe/ruakr_itemgroup": "^2.0.6",
-        "@mcbe/system_server": "^2.0.6",
+        "@mcbe/command": "^2.0.8",
+        "@mcbe/ruakr_itemgroup": "^2.0.8",
+        "@mcbe/system_server": "^2.0.8",
         "krgeometry": "^2.0.4"
     },
     "peerDependencies": {

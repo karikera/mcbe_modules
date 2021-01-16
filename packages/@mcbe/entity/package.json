@@ -1,6 +1,6 @@
 {
     "name": "@mcbe/entity",
-    "version": "2.0.6",
+    "version": "2.0.8",
     "description": "classified entity",
     "main": "index.js",
     "keywords": [],
@@ -11,10 +11,10 @@
         "url": "https://github.com/karikera/mcbe_modules"
     },
     "dependencies": {
-        "@mcbe/component": "^2.0.4",
-        "@mcbe/event_server": "^2.0.6",
-        "@mcbe/nexttick": "^2.0.4",
-        "@mcbe/system_server": "^2.0.6",
+        "@mcbe/component": "^2.0.8",
+        "@mcbe/event_server": "^2.0.8",
+        "@mcbe/nexttick": "^2.0.8",
+        "@mcbe/system_server": "^2.0.8",
         "krarraymap": "^2.0.4",
         "krevent": "^1.0.0",
         "krgeometry": "^2.0.4"

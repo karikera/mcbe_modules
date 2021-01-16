@@ -1,6 +1,6 @@
 {
   "name": "@mcbe/damper",
-  "version": "2.0.4",
+  "version": "2.0.8",
   "description": "Reducing number object, it uses the millisecond rule",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "author": "ruakr <karikera3@hotmail.com> (https://rua.kr/)",
   "license": "ISC",
   "dependencies": {
-    "@mcbe/timer": "^2.0.4"
+    "@mcbe/timer": "^2.0.8"
   }
 }

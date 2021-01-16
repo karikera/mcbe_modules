@@ -1,6 +1,6 @@
 {
     "name": "@bdsx/ruakr_ban",
-    "version": "2.0.7",
+    "version": "2.0.8",
     "description": "ban_feature with ruakr_user",
     "main": "index.js",
     "keywords": [],
@@ -11,15 +11,15 @@
         "url": "https://github.com/karikera/mcbe_modules"
     },
     "dependencies": {
-        "@bdsx/block": "^2.0.6",
-        "@bdsx/logininfo-db": "^2.0.4",
-        "@bdsx/restoreblock": "^2.0.6",
-        "@bdsx/ruakr_user": "^2.0.7",
-        "@mcbe/damper": "^2.0.4",
-        "@mcbe/ruakr_itemgroup": "^2.0.6",
-        "@mcbe/ruakr_log": "^2.0.6",
-        "@mcbe/store": "^2.0.6",
-        "@mcbe/system_server": "^2.0.6",
+        "@bdsx/block": "^2.0.8",
+        "@bdsx/logininfo-db": "^2.0.8",
+        "@bdsx/restoreblock": "^2.0.8",
+        "@bdsx/ruakr_user": "^2.0.8",
+        "@mcbe/damper": "^2.0.8",
+        "@mcbe/ruakr_itemgroup": "^2.0.8",
+        "@mcbe/ruakr_log": "^2.0.8",
+        "@mcbe/store": "^2.0.8",
+        "@mcbe/system_server": "^2.0.8",
         "krjsonwatcher": "^1.0.0"
     },
     "peerDependencies": {
