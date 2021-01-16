@@ -370,6 +370,7 @@ export class User implements UserLike
 {
     public readonly uid:number;
     public readonly actor:Actor;
+    public static errorKickLimitation = 5;
 
     public interectingBlock:Block|null = null;
     public disposed = false;
@@ -1005,7 +1006,10 @@ export class User implements UserLike
                     console.error(err);
                     console.error( `${name}: failed to join by error`);
                 }
-                system.destroyEntity(entity);
+                if (User.errorKickLimitation !== 0)
+                {
+                    system.destroyEntity(entity);
+                }
                 return null;
             }
         }
@@ -1174,7 +1178,8 @@ events.update.on(()=>{
             }
             else
             {
-                if (user.errorCounter >= 5)
+                console.error(err.stack);
+                if (User.errorKickLimitation !== 0 && user.errorCounter >= User.errorKickLimitation)
                 {
                     console.error(`${user}: kicked by too many errors`);
                     user.kick();
